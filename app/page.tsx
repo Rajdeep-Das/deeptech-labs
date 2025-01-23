@@ -17,6 +17,13 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToManifesto = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <main className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* Navigation - Mobile Responsive */}
@@ -109,7 +116,11 @@ export default function Home() {
               />
             </div>
 
-            <ChevronDown className="w-8 h-8 mx-auto text-purple-400 animate-bounce" />
+            {/* Replace the existing ChevronDown with this new one */}
+            <ChevronDown
+              className="w-8 h-8 mx-auto text-purple-400 animate-bounce cursor-pointer"
+              onClick={scrollToManifesto}
+            />
           </div>
         </div>
       </section>
@@ -185,8 +196,10 @@ function Card({
                     border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300
                     ${className}`}
     >
-      <div className="w-12 h-12 mb-4 text-purple-400 group-hover:text-purple-300 transition-colors">
-        {icon}
+      <div className="inline-flex items-center justify-center w-10 h-10 mb-4 rounded-lg bg-purple-900/30">
+        <div className="flex items-center justify-center w-full h-full text-purple-400 group-hover:text-purple-300 transition-colors">
+          {icon}
+        </div>
       </div>
       <h3 className="text-lg sm:text-xl font-semibold mb-3 text-gray-100">
         {title}
