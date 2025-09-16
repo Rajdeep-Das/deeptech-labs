@@ -41,7 +41,7 @@ export default function Home() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               <button className="px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition-opacity">
-                Connect
+                Book a 30-min Audit Kickoff Call
               </button>
             </div>
 
@@ -63,7 +63,7 @@ export default function Home() {
             <div className="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-md py-4 border-t border-purple-500/20 mobile-menu-enter">
               <div className="container mx-auto px-4">
                 <button className="w-full px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition-opacity">
-                  Connect
+                  Book a 30-min Audit Kickoff Call
                 </button>
               </div>
             </div>
@@ -82,38 +82,26 @@ export default function Home() {
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight leading-tight fade-in-up">
               <span className="inline-block bg-gradient-to-r from-purple-400 via-blue-500 to-indigo-400 text-transparent bg-clip-text animate-gradient">
-                Where Algorithms
+                Cloud-Native Backends & Modern Integrations
               </span>
               <br />
               <span className="inline-block bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-400 text-transparent bg-clip-text animate-gradient-reverse">
-                Dance with Dreams
+                Built Fast, Secure, Cost-Aware
               </span>
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-blue-200/90 mb-12 leading-relaxed max-w-3xl mx-auto px-4 fade-in-up fade-in-up-delay-1">
-              We are the digital dreamweavers, neural architects of tomorrow.
-              Our algorithms are brushstrokes, painting possibilities across the
-              canvas of technology.
+              We help startups and small businesses migrate legacy apps, integrate modern tools, and launch SaaS backends that scale. Fixed-price · Fast delivery · No surprises.
             </p>
 
-            {/* Cards Grid - Mobile Responsive */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12 px-4 fade-in-up fade-in-up-delay-2">
-              <Card
-                icon={<Brain className="w-6 h-6" />}
-                title="Neural Architecture"
-                description="Building intelligent systems that learn, adapt, and evolve."
-              />
-              <Card
-                icon={<Code className="w-6 h-6" />}
-                title="Digital Artistry"
-                description="Transforming complex data into beautiful, intuitive experiences."
-              />
-              <Card
-                icon={<Sparkles className="w-6 h-6" />}
-                title="Creative AI"
-                description="Where artificial intelligence meets creative expression."
-                className="sm:col-span-2 lg:col-span-1 sm:max-w-md sm:mx-auto lg:max-w-none"
-              />
+            {/* CTA Buttons - Mobile Responsive */}
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-12 px-4 fade-in-up fade-in-up-delay-2 justify-center">
+              <button className="px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition-opacity text-lg font-semibold">
+                Book a 30-min Audit Kickoff Call
+              </button>
+              <button className="px-8 py-4 rounded-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500/10 transition-all text-lg font-semibold">
+                Pay & Start Migration Audit (US$300)
+              </button>
             </div>
 
             {/* Replace the existing ChevronDown with this new one */}
