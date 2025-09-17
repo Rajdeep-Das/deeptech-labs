@@ -1,171 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Base styles */
+/* Carbon Design System inspired base styles */
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+  --foreground-rgb: 22, 22, 22;
+  --background-start-rgb: 244, 244, 244;
+  --background-end-rgb: 244, 244, 244;
+
+  /* Carbon spacing scale */
+  --spacing-01: 0.125rem;
+  --spacing-02: 0.25rem;
+  --spacing-03: 0.5rem;
+  --spacing-04: 0.75rem;
+  --spacing-05: 1rem;
+  --spacing-06: 1.5rem;
+  --spacing-07: 2rem;
+  --spacing-08: 2.5rem;
+  --spacing-09: 3rem;
+  --spacing-10: 4rem;
+  --spacing-11: 5rem;
+  --spacing-12: 6rem;
 }
 
-/* Mobile-optimized animations */
+@layer base {
+  body {
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  code, pre {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+}
+
+/* Carbon Design System utilities */
+@layer utilities {
+  .carbon-focus {
+    outline: 2px solid #0f62fe;
+    outline-offset: 2px;
+  }
+
+  .carbon-elevation-01 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .carbon-elevation-02 {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Smooth animations for better user experience */
 @media (prefers-reduced-motion: no-preference) {
-  .fade-in-up {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease forwards;
+  .animate-bounce {
+    animation: bounce 2s infinite;
   }
 
-  .fade-in-up-delay-1 {
-    animation-delay: 0.2s;
-  }
-
-  .fade-in-up-delay-2 {
-    animation-delay: 0.4s;
-  }
-
-  /* Staggered animation for grid items */
-  .grid-item-animate {
-    opacity: 0;
-    animation: gridItemFade 0.5s ease forwards;
-  }
-
-  @for $i from 1 through 8 {
-    .grid-item-animate:nth-child(#{$i}) {
-      animation-delay: calc(0.1s * #{$i});
+  @keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+    40%, 43% {
+      transform: translate3d(0, -15px, 0);
+    }
+    70% {
+      transform: translate3d(0, -8px, 0);
+    }
+    90% {
+      transform: translate3d(0, -3px, 0);
     }
   }
-
-  /* Smooth mobile menu transition */
-  .mobile-menu-enter {
-    opacity: 0;
-    transform: translateY(-10px);
-    animation: menuEnter 0.3s ease forwards;
-  }
-
-  .mobile-menu-exit {
-    opacity: 1;
-    transform: translateY(0);
-    animation: menuExit 0.3s ease forwards;
-  }
-
-  /* Touch-friendly hover effects */
-  @media (hover: hover) {
-    .hover-lift {
-      transition: transform 0.2s ease;
-    }
-    .hover-lift:hover {
-      transform: translateY(-5px);
-    }
-  }
-
-  /* Performance-optimized neural grid for mobile */
-  .neural-grid {
-    background-image: linear-gradient(
-        to right,
-        rgba(139, 92, 246, 0.1) 1px,
-        transparent 1px
-      ),
-      linear-gradient(to bottom, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    width: 100%;
-    height: 100%;
-    animation: mobileGridFloat 15s linear infinite;
-    will-change: transform;
-  }
-
-  /* Optimized text gradient animation */
-  .animate-gradient {
-    background-size: 200% 200%;
-    animation: gradientFlow 8s ease infinite;
-    will-change: background-position;
-  }
-
-  .animate-gradient-reverse {
-    background-size: 200% 200%;
-    animation: gradientFlow 8s ease infinite reverse;
-    will-change: background-position;
-  }
 }
 
-/* Animation Keyframes */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes gridItemFade {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes menuEnter {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes menuExit {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes mobileGridFloat {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(-10px, -10px, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Touch device optimizations */
-@media (hover: none) {
-  .neural-grid {
-    animation: mobileGridFloat 20s linear infinite;
-  }
-}
-
-/* Reduced motion preferences */
+/* Accessibility and motion preferences */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -173,23 +90,4 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-/* Custom scrollbar for supported browsers */
-.custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(139, 92, 246, 0.5) transparent;
-}
-
-.custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: rgba(139, 92, 246, 0.5);
-  border-radius: 3px;
 }

@@ -1,8 +1,7 @@
-// app/page.tsx
 "use client";
 
 import { useState, useEffect } from "react";
-import { Brain, Code, Sparkles, ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, ArrowRight, CheckCircle } from "lucide-react";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,53 +16,59 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToManifesto = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth",
-    });
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services');
+    servicesSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <main className="min-h-screen bg-black text-white overflow-x-hidden">
-      {/* Navigation - Mobile Responsive */}
+    <main className="min-h-screen bg-white text-gray-100 font-sans">
+      {/* Navigation */}
       <nav
         className={`fixed w-full z-50 transition-all duration-300 ${
-          scrolled ? "bg-black/80 backdrop-blur-md py-4" : "bg-transparent py-6"
+          scrolled
+            ? "bg-white shadow-carbon-02 border-b border-gray-20"
+            : "bg-white border-b border-gray-10"
         }`}
       >
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
-            <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-500 text-transparent bg-clip-text">
-              DeepTech Labs
+        <div className="max-w-screen-lg mx-auto px-05 lg:px-06">
+          <div className="flex items-center justify-between h-16">
+            <div className="text-heading-04 font-semibold text-gray-100 tracking-tight">
+              DeepTechLabs
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
-              <button className="px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition-opacity">
-                Book a 30-min Audit Kickoff Call
+            <div className="hidden md:flex items-center space-x-07">
+              <a href="#services" className="text-body-01 text-gray-70 hover:text-gray-100 transition-colors font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-60 after:transition-all hover:after:w-full">
+                Services
+              </a>
+              <button className="px-06 py-03 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-01 hover:shadow-carbon-02 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2">
+                Book 30-min Call
               </button>
             </div>
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2"
+              className="md:hidden p-03 hover:bg-gray-10 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-purple-400" />
+                <X className="w-5 h-5 text-gray-70" />
               ) : (
-                <Menu className="w-6 h-6 text-purple-400" />
+                <Menu className="w-5 h-5 text-gray-70" />
               )}
             </button>
           </div>
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-md py-4 border-t border-purple-500/20 mobile-menu-enter">
-              <div className="container mx-auto px-4">
-                <button className="w-full px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition-opacity">
-                  Book a 30-min Audit Kickoff Call
+            <div className="md:hidden bg-white border-t border-gray-20 py-05 shadow-carbon-03">
+              <div className="space-y-04">
+                <a href="#services" className="block text-body-01 text-gray-70 hover:text-gray-100 py-02 font-medium">
+                  Services
+                </a>
+                <button className="w-full px-05 py-03 bg-blue-60 text-white hover:bg-blue-70 transition-colors text-body-compact-02 font-medium shadow-carbon-01">
+                  Book 30-min Call
                 </button>
               </div>
             </div>
@@ -71,130 +76,288 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section - Mobile Optimized */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-black to-blue-900/30" />
-          <div className="neural-grid" />
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-b from-gray-10 to-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-10/30 via-transparent to-transparent"></div>
+
+        <div className="relative pt-24 pb-16 lg:pt-32 lg:pb-20">
+          <div className="max-w-screen-lg mx-auto px-05 lg:px-06">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-08 lg:gap-10 items-center">
+
+              {/* Main Content */}
+              <div className="lg:col-span-8 text-center lg:text-left">
+                <div className="mb-05">
+                  <span className="inline-flex items-center px-04 py-02 bg-blue-10 text-blue-70 text-label-02 font-medium border-l-4 border-blue-60">
+                    Enterprise Cloud Solutions
+                  </span>
+                </div>
+
+                <h1 className="text-fluid-heading-05 lg:text-fluid-heading-06 font-semibold text-gray-100 mb-06 leading-tight tracking-tight">
+                  Stop Burning Money & Time on Cloud That Doesn't Work
+                </h1>
+
+                <p className="text-body-02 text-gray-70 mb-08 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                  Already on AWS or Azure? Costs keep rising, integrations break, and releases are slow.
+                  DeepTechLabs fixes this with fixed-price audits, 2-week sprints, and production-ready SaaS backends.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-04 mb-08 justify-center lg:justify-start">
+                  <a href="<!-- STRIPE_PAYMENT_LINK -->"
+                     className="group inline-flex items-center justify-center px-06 py-04 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2">
+                    <span>Book 7-Day Cloud Health Audit — US$300</span>
+                  </a>
+                  <a href="<!-- SAMPLE_REPORT_LINK -->"
+                     className="group inline-flex items-center justify-center px-06 py-04 border border-gray-30 text-gray-80 hover:bg-gray-10 hover:border-gray-40 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-01 hover:shadow-carbon-02 focus:outline-none focus:ring-2 focus:ring-gray-60 focus:ring-offset-2">
+                    <span>See Example Audit Report</span>
+                    <ArrowRight className="ml-03 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+
+                {/* Trust indicators */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-04 max-w-2xl mx-auto lg:mx-0">
+                  <div className="flex items-center justify-center lg:justify-start p-04 bg-green-10/50 border-l-2 border-green-60">
+                    <CheckCircle className="w-4 h-4 text-green-60 mr-03 flex-shrink-0" />
+                    <span className="text-body-compact-01 text-gray-70 font-medium">Cut infra cost by 20–30%</span>
+                  </div>
+                  <div className="flex items-center justify-center lg:justify-start p-04 bg-blue-10/50 border-l-2 border-blue-60">
+                    <CheckCircle className="w-4 h-4 text-blue-60 mr-03 flex-shrink-0" />
+                    <span className="text-body-compact-01 text-gray-70 font-medium">Fix broken integrations in 2 weeks</span>
+                  </div>
+                  <div className="flex items-center justify-center lg:justify-start p-04 bg-gray-10 border-l-2 border-gray-60">
+                    <CheckCircle className="w-4 h-4 text-gray-60 mr-03 flex-shrink-0" />
+                    <span className="text-body-compact-01 text-gray-70 font-medium">Trusted by startups in US, UK & AU</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Visual Element */}
+              <div className="lg:col-span-4 flex justify-center lg:justify-end">
+                <div className="relative">
+                  <div className="w-80 h-80 bg-gradient-to-br from-blue-60 to-blue-80 opacity-10 transform rotate-6"></div>
+                  <div className="absolute inset-0 w-80 h-80 bg-gradient-to-br from-gray-90 to-gray-100 opacity-5 transform -rotate-3"></div>
+                  <div className="absolute inset-4 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-heading-04 font-semibold text-blue-60 mb-02">Cloud Audit</div>
+                      <div className="text-body-01 text-gray-70">7-day analysis</div>
+                      <div className="text-heading-06 font-bold text-gray-100 mt-04">$300</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight leading-tight fade-in-up">
-              <span className="inline-block bg-gradient-to-r from-purple-400 via-blue-500 to-indigo-400 text-transparent bg-clip-text animate-gradient">
-                Cloud-Native Backends & Modern Integrations
-              </span>
-              <br />
-              <span className="inline-block bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-400 text-transparent bg-clip-text animate-gradient-reverse">
-                Built Fast, Secure, Cost-Aware
-              </span>
-            </h1>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-05 left-1/2 transform -translate-x-1/2">
+          <button
+            onClick={scrollToServices}
+            className="group p-03 hover:bg-white hover:shadow-carbon-02 transition-all duration-200 border border-gray-20 bg-white/80 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2"
+          >
+            <ChevronDown className="w-5 h-5 text-gray-70 group-hover:text-blue-60 group-hover:translate-y-1 transition-all animate-bounce" />
+          </button>
+        </div>
+      </section>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-blue-200/90 mb-12 leading-relaxed max-w-3xl mx-auto px-4 fade-in-up fade-in-up-delay-1">
-              We help startups and small businesses migrate legacy apps, integrate modern tools, and launch SaaS backends that scale. Fixed-price · Fast delivery · No surprises.
+      {/* Services Section */}
+      <section id="services" className="relative py-16 lg:py-20 bg-white">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-10/30 to-transparent"></div>
+
+        <div className="relative max-w-screen-lg mx-auto px-05 lg:px-06">
+          {/* Section Header */}
+          <div className="text-center mb-12 lg:mb-16">
+            <div className="mb-05">
+              <span className="inline-flex items-center px-04 py-02 bg-gray-10 text-gray-70 text-label-02 font-medium border-l-4 border-gray-60">
+                Fixed-Price Solutions
+              </span>
+            </div>
+            <h2 className="text-fluid-heading-05 font-semibold text-gray-100 mb-05 tracking-tight">Our Fixed-Price Services</h2>
+            <p className="text-body-02 text-gray-70 max-w-2xl mx-auto leading-relaxed">Transparent, scoped, and outcome-driven — no surprises.</p>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-06 lg:gap-08">
+
+            {/* Service Card 1 - Featured */}
+            <div className="group relative bg-white border-2 border-blue-60 shadow-carbon-03 hover:shadow-carbon-05 transition-all duration-300 p-06 lg:p-07">
+              <div className="absolute top-0 right-0 bg-blue-60 text-white px-03 py-01 text-caption-02 font-medium">
+                Most Popular
+              </div>
+
+              <div className="flex items-start justify-between mb-05">
+                <div className="flex-1">
+                  <div className="flex items-center mb-03">
+                    <div className="w-08 h-08 bg-blue-60 flex items-center justify-center mr-04">
+                      <span className="text-white font-bold text-caption-02">$300</span>
+                    </div>
+                    <div>
+                      <h3 className="text-heading-04 font-semibold text-gray-100 leading-tight">Cloud Health Audit</h3>
+                    </div>
+                  </div>
+                  <p className="text-body-01 text-gray-70 mb-05 font-medium">7 days · US$300 · 100% upfront</p>
+                </div>
+              </div>
+
+              <ul className="space-y-03 mb-06">
+                <li className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-60 mr-03 mt-01 flex-shrink-0" />
+                  <span className="text-body-compact-01 text-gray-80">Identify wasted spend (20–30% typical savings)</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-60 mr-03 mt-01 flex-shrink-0" />
+                  <span className="text-body-compact-01 text-gray-80">Spot security & compliance risks</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-60 mr-03 mt-01 flex-shrink-0" />
+                  <span className="text-body-compact-01 text-gray-80">Prioritized 30-day action plan</span>
+                </li>
+              </ul>
+
+              <a href="<!-- STRIPE_PAYMENT_LINK -->"
+                 className="group/btn w-full inline-flex items-center justify-center px-05 py-04 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2">
+                <span>Pay & Start Audit</span>
+                <ArrowRight className="ml-02 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+              </a>
+            </div>
+
+            {/* Service Card 2 */}
+            <div className="group relative bg-white border border-gray-20 shadow-carbon-02 hover:shadow-carbon-04 hover:border-gray-30 transition-all duration-300 p-06 lg:p-07">
+              <div className="flex items-start justify-between mb-05">
+                <div className="flex-1">
+                  <div className="flex items-center mb-03">
+                    <div className="w-08 h-08 bg-gray-90 flex items-center justify-center mr-04">
+                      <span className="text-white font-bold text-caption-02">$1.2K</span>
+                    </div>
+                    <div>
+                      <h3 className="text-heading-04 font-semibold text-gray-100 leading-tight">Integration Sprint</h3>
+                    </div>
+                  </div>
+                  <p className="text-body-01 text-gray-70 mb-05 font-medium">2 weeks · US$1,200 · 50% upfront</p>
+                </div>
+              </div>
+
+              <ul className="space-y-03 mb-06">
+                <li className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-60 mr-03 mt-01 flex-shrink-0" />
+                  <span className="text-body-compact-01 text-gray-80">Rebuild or stabilize one key integration</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-60 mr-03 mt-01 flex-shrink-0" />
+                  <span className="text-body-compact-01 text-gray-80">Add monitoring & error alerts</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-60 mr-03 mt-01 flex-shrink-0" />
+                  <span className="text-body-compact-01 text-gray-80">Delivered, tested, documented</span>
+                </li>
+              </ul>
+
+              <a href="<!-- CONTACT_LINK -->"
+                 className="group/btn w-full inline-flex items-center justify-center px-05 py-04 bg-gray-100 text-white hover:bg-gray-90 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-gray-70 focus:ring-offset-2">
+                <span>Start Sprint</span>
+                <ArrowRight className="ml-02 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+              </a>
+            </div>
+
+            {/* Service Card 3 */}
+            <div className="group relative bg-white border border-gray-20 shadow-carbon-02 hover:shadow-carbon-04 hover:border-gray-30 transition-all duration-300 p-06 lg:p-07">
+              <div className="absolute top-0 right-0 bg-gray-90 text-white px-03 py-01 text-caption-02 font-medium">
+                Enterprise
+              </div>
+
+              <div className="flex items-start justify-between mb-05">
+                <div className="flex-1">
+                  <div className="flex items-center mb-03">
+                    <div className="w-08 h-08 bg-gray-90 flex items-center justify-center mr-04">
+                      <span className="text-white font-bold text-caption-02">$3K</span>
+                    </div>
+                    <div>
+                      <h3 className="text-heading-04 font-semibold text-gray-100 leading-tight">SaaS Backend Starter</h3>
+                    </div>
+                  </div>
+                  <p className="text-body-01 text-gray-70 mb-05 font-medium">3–4 weeks · US$3,000 · 50% upfront</p>
+                </div>
+              </div>
+
+              <ul className="space-y-03 mb-06">
+                <li className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-60 mr-03 mt-01 flex-shrink-0" />
+                  <span className="text-body-compact-01 text-gray-80">Multi-tenant Auth, Billing, APIs</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-60 mr-03 mt-01 flex-shrink-0" />
+                  <span className="text-body-compact-01 text-gray-80">CI/CD pipelines & infra-as-code</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-60 mr-03 mt-01 flex-shrink-0" />
+                  <span className="text-body-compact-01 text-gray-80">Monitoring, logging, alerts</span>
+                </li>
+              </ul>
+
+              <a href="<!-- CONTACT_LINK -->"
+                 className="group/btn w-full inline-flex items-center justify-center px-05 py-04 bg-gray-100 text-white hover:bg-gray-90 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-gray-70 focus:ring-offset-2">
+                <span>Start Project</span>
+                <ArrowRight className="ml-02 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="relative py-16 lg:py-20 bg-gradient-to-b from-gray-90 to-gray-100 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-90/20 via-transparent to-transparent"></div>
+
+        <div className="relative max-w-screen-lg mx-auto px-05 lg:px-06">
+          <div className="text-center">
+            <div className="mb-06">
+              <span className="inline-flex items-center px-04 py-02 bg-white/10 text-blue-20 text-label-02 font-medium border-l-4 border-blue-40 backdrop-blur-sm">
+                Ready to Transform Your Cloud Infrastructure?
+              </span>
+            </div>
+
+            <h2 className="text-fluid-heading-05 lg:text-fluid-heading-06 font-semibold text-white mb-06 leading-tight tracking-tight max-w-3xl mx-auto">
+              Ready to cut cloud waste & fix fragile systems?
+            </h2>
+
+            <p className="text-body-02 text-blue-20 mb-10 max-w-2xl mx-auto leading-relaxed">
+              Start with a 7-day Cloud Health Audit for US$300. Get a comprehensive roadmap in one week.
             </p>
 
-            {/* CTA Buttons - Mobile Responsive */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-12 px-4 fade-in-up fade-in-up-delay-2 justify-center">
-              <button className="px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition-opacity text-lg font-semibold">
-                Book a 30-min Audit Kickoff Call
-              </button>
-              <button className="px-8 py-4 rounded-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500/10 transition-all text-lg font-semibold">
-                Pay & Start Migration Audit (US$300)
-              </button>
+            <div className="flex flex-col sm:flex-row gap-05 justify-center mb-10">
+              <a href="<!-- STRIPE_PAYMENT_LINK -->"
+                 className="group inline-flex items-center justify-center px-07 py-04 bg-white text-gray-100 hover:bg-gray-10 transition-all duration-200 text-body-compact-02 font-semibold shadow-carbon-04 hover:shadow-carbon-05 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-90">
+                <span>Pay & Start Audit</span>
+                <ArrowRight className="ml-03 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a href="<!-- CALENDLY_LINK -->"
+                 className="group inline-flex items-center justify-center px-07 py-04 border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-200 text-body-compact-02 font-medium backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-90">
+                <span>Book a 30-min Call</span>
+                <ArrowRight className="ml-03 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
 
-            {/* Replace the existing ChevronDown with this new one */}
-            <ChevronDown
-              className="w-8 h-8 mx-auto text-purple-400 animate-bounce cursor-pointer"
-              onClick={scrollToManifesto}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Manifesto Section - Mobile Optimized */}
-      <section className="py-16 sm:py-20 md:py-24 relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text px-4">
-              Our Digital Atelier
-            </h2>
-            <div className="prose prose-invert mx-auto px-4">
-              <p className="text-lg sm:text-xl text-gray-300 mb-6 leading-relaxed">
-                Each project is a fusion of mathematical precision and artistic
-                vision, where neural networks breathe life into data, and
-                artificial intelligence dances on the edge of imagination.
-              </p>
-              <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-                In our digital atelier, we're not just building applications –
-                we're crafting experiences that resonate at the intersection of
-                art and innovation. Welcome to a space where bits become beauty,
-                and technology transcends into artistry.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Tech Stack Grid - Mobile Optimized */}
-      <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-black via-purple-900/10 to-black">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto">
-            {[
-              "Neural Networks",
-              "Computer Vision",
-              "Deep Learning",
-              "Data Science",
-              "Cloud Architecture",
-              "DevOps",
-              "AI Research",
-              "Creative Tech",
-            ].map((tech) => (
-              <div
-                key={tech}
-                className="px-4 sm:px-6 py-3 rounded-full bg-purple-900/20 border border-purple-500/20 
-                         text-center text-sm text-gray-300 hover:border-purple-500/40 
-                         hover:bg-purple-900/30 transition-all duration-300"
-              >
-                {tech}
+            {/* Trust indicators */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-06 max-w-3xl mx-auto">
+              <div className="flex items-center justify-center p-04 bg-white/5 border-l-2 border-green-40 backdrop-blur-sm">
+                <CheckCircle className="w-4 h-4 text-green-40 mr-03 flex-shrink-0" />
+                <span className="text-body-compact-01 text-blue-20 font-medium">No long-term contracts</span>
               </div>
-            ))}
+              <div className="flex items-center justify-center p-04 bg-white/5 border-l-2 border-blue-40 backdrop-blur-sm">
+                <CheckCircle className="w-4 h-4 text-blue-40 mr-03 flex-shrink-0" />
+                <span className="text-body-compact-01 text-blue-20 font-medium">100% satisfaction guarantee</span>
+              </div>
+              <div className="flex items-center justify-center p-04 bg-white/5 border-l-2 border-gray-40 backdrop-blur-sm">
+                <CheckCircle className="w-4 h-4 text-gray-40 mr-03 flex-shrink-0" />
+                <span className="text-body-compact-01 text-blue-20 font-medium">Enterprise-grade security</span>
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Subtle geometric elements */}
+        <div className="absolute top-10 right-10 w-32 h-32 bg-white/5 transform rotate-12 hidden lg:block"></div>
+        <div className="absolute bottom-10 left-10 w-24 h-24 bg-blue-40/10 transform -rotate-12 hidden lg:block"></div>
       </section>
     </main>
-  );
-}
-
-function Card({
-  icon,
-  title,
-  description,
-  className = "",
-}: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  className?: string;
-}) {
-  return (
-    <div
-      className={`group p-6 rounded-2xl bg-gradient-to-b from-purple-900/20 to-transparent 
-                    border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300
-                    ${className}`}
-    >
-      <div className="inline-flex items-center justify-center w-10 h-10 mb-4 rounded-lg bg-purple-900/30">
-        <div className="flex items-center justify-center w-full h-full text-purple-400 group-hover:text-purple-300 transition-colors">
-          {icon}
-        </div>
-      </div>
-      <h3 className="text-lg sm:text-xl font-semibold mb-3 text-gray-100">
-        {title}
-      </h3>
-      <p className="text-sm sm:text-base text-gray-400 group-hover:text-gray-300 transition-colors">
-        {description}
-      </p>
-    </div>
   );
 }

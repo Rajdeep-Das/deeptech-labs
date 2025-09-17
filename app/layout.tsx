@@ -13,8 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DeepTech Labs",
-  description: "Creafted with ❤️ by DeepTech Labs",
+  title: "DeepTechLabs — Cloud Health & SaaS Integrations",
+  description: "Stop burning money & time on cloud that doesn't work. Fixed-price cloud audits, 2-week integration sprints, and production-ready SaaS backends. Trusted by startups in US, UK & AU.",
+  keywords: "cloud health audit, cloud cost optimization, SaaS integrations, cloud migration, AWS optimization, Azure optimization",
+  openGraph: {
+    title: "DeepTechLabs — Cloud Health & SaaS Integrations",
+    description: "Stop burning money & time on cloud that doesn't work. Fixed-price cloud audits, 2-week integration sprints, and production-ready SaaS backends.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
