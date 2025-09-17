@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ChevronDown, Menu, X, ArrowRight, CheckCircle } from "lucide-react";
+import { ChevronDown, Menu, X, ArrowRight, CheckCircle, Shield, Zap, Settings, Cloud, Database, Lock, Activity, BarChart3 } from "lucide-react";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -130,18 +130,72 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Visual Element */}
+              {/* Professional Illustration */}
               <div className="lg:col-span-4 flex justify-center lg:justify-end">
-                <div className="relative">
-                  <div className="w-80 h-80 bg-gradient-to-br from-blue-60 to-blue-80 opacity-10 transform rotate-6"></div>
-                  <div className="absolute inset-0 w-80 h-80 bg-gradient-to-br from-gray-90 to-gray-100 opacity-5 transform -rotate-3"></div>
-                  <div className="absolute inset-4 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-heading-04 font-semibold text-blue-60 mb-02">Cloud Audit</div>
-                      <div className="text-body-01 text-gray-70">7-day analysis</div>
-                      <div className="text-heading-06 font-bold text-gray-100 mt-04">$300</div>
+                <div className="relative w-80 h-80">
+                  {/* Background geometric elements */}
+                  <div className="absolute inset-0">
+                    <div className="w-full h-full bg-gradient-to-br from-blue-10 to-blue-20 border border-blue-30 transform rotate-3"></div>
+                    <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-gray-10 to-gray-20 border border-gray-30 transform -rotate-2"></div>
+                  </div>
+
+                  {/* Cloud architecture illustration */}
+                  <div className="absolute inset-6 bg-white border border-gray-20 shadow-carbon-04 p-05">
+                    {/* Header */}
+                    <div className="flex items-center justify-between mb-04 pb-02 border-b border-gray-20">
+                      <div className="text-label-02 font-semibold text-gray-100">Cloud Health Dashboard</div>
+                      <div className="w-2 h-2 bg-green-60 rounded-full"></div>
+                    </div>
+
+                    {/* Charts and metrics */}
+                    <div className="space-y-03">
+                      {/* Cost savings chart */}
+                      <div className="flex items-center justify-between">
+                        <span className="text-caption-02 text-gray-70">Cost Savings</span>
+                        <div className="flex items-center">
+                          <div className="w-12 h-1 bg-green-60 mr-02"></div>
+                          <span className="text-caption-02 font-semibold text-green-60">30%</span>
+                        </div>
+                      </div>
+
+                      {/* Security score */}
+                      <div className="flex items-center justify-between">
+                        <span className="text-caption-02 text-gray-70">Security Score</span>
+                        <div className="flex items-center">
+                          <div className="w-10 h-1 bg-blue-60 mr-02"></div>
+                          <span className="text-caption-02 font-semibold text-blue-60">85%</span>
+                        </div>
+                      </div>
+
+                      {/* Performance */}
+                      <div className="flex items-center justify-between">
+                        <span className="text-caption-02 text-gray-70">Performance</span>
+                        <div className="flex items-center">
+                          <div className="w-8 h-1 bg-yellow-500 mr-02"></div>
+                          <span className="text-caption-02 font-semibold text-yellow-600">75%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Central focus */}
+                    <div className="mt-05 pt-04 border-t border-gray-20 text-center">
+                      <div className="text-heading-04 font-semibold text-blue-60 mb-01">Cloud Audit</div>
+                      <div className="text-caption-02 text-gray-70 mb-02">7-day analysis</div>
+                      <div className="text-heading-05 font-bold text-gray-100">$300</div>
+                    </div>
+
+                    {/* Server icons */}
+                    <div className="absolute bottom-02 right-02 flex space-x-01">
+                      <div className="w-2 h-2 bg-blue-60"></div>
+                      <div className="w-2 h-2 bg-gray-60"></div>
+                      <div className="w-2 h-2 bg-green-60"></div>
                     </div>
                   </div>
+
+                  {/* Floating elements */}
+                  <div className="absolute -top-2 -left-2 w-4 h-4 bg-blue-60 transform rotate-45"></div>
+                  <div className="absolute -bottom-2 -right-2 w-3 h-3 bg-green-60 rounded-full"></div>
+                  <div className="absolute top-1/2 -right-3 w-2 h-8 bg-gray-30"></div>
                 </div>
               </div>
             </div>
@@ -160,8 +214,20 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="relative py-16 lg:py-20 bg-white">
+      <section id="services" className="relative py-16 lg:py-20 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-10/30 to-transparent"></div>
+
+        {/* Professional background pattern */}
+        <div className="absolute inset-0 opacity-[0.02]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3Ccircle cx='37' cy='37' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}></div>
+        </div>
+
+        {/* Subtle geometric elements */}
+        <div className="absolute top-10 left-10 w-32 h-32 border border-blue-20 transform rotate-12 hidden lg:block"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 bg-gray-10 transform -rotate-6 hidden lg:block"></div>
+        <div className="absolute top-1/2 left-0 w-2 h-32 bg-gradient-to-b from-blue-60 to-transparent"></div>
 
         <div className="relative max-w-screen-lg mx-auto px-05 lg:px-06">
           {/* Section Header */}
@@ -184,17 +250,19 @@ export default function Home() {
                 Most Popular
               </div>
 
-              <div className="flex items-start justify-between mb-05">
-                <div className="flex-1">
-                  <div className="flex items-center mb-03">
-                    <div className="w-08 h-08 bg-blue-60 flex items-center justify-center mr-04">
-                      <span className="text-white font-bold text-caption-02">$300</span>
-                    </div>
-                    <div>
-                      <h3 className="text-heading-04 font-semibold text-gray-100 leading-tight">Cloud Health Audit</h3>
-                    </div>
+              {/* Professional service icon */}
+              <div className="flex items-center mb-05">
+                <div className="relative mr-04">
+                  <div className="w-12 h-12 bg-blue-10 border border-blue-30 flex items-center justify-center">
+                    <BarChart3 className="w-6 h-6 text-blue-60" />
                   </div>
-                  <p className="text-body-01 text-gray-70 mb-05 font-medium">7 days · US$300 · 100% upfront</p>
+                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-blue-60 flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">$</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-heading-04 font-semibold text-gray-100 leading-tight mb-01">Cloud Health Audit</h3>
+                  <p className="text-body-01 text-gray-70 font-medium">7 days · US$300 · 100% upfront</p>
                 </div>
               </div>
 
@@ -222,17 +290,19 @@ export default function Home() {
 
             {/* Service Card 2 */}
             <div className="group relative bg-white border border-gray-20 shadow-carbon-02 hover:shadow-carbon-04 hover:border-gray-30 transition-all duration-300 p-06 lg:p-07">
-              <div className="flex items-start justify-between mb-05">
-                <div className="flex-1">
-                  <div className="flex items-center mb-03">
-                    <div className="w-08 h-08 bg-gray-90 flex items-center justify-center mr-04">
-                      <span className="text-white font-bold text-caption-02">$1.2K</span>
-                    </div>
-                    <div>
-                      <h3 className="text-heading-04 font-semibold text-gray-100 leading-tight">Integration Sprint</h3>
-                    </div>
+              {/* Professional service icon */}
+              <div className="flex items-center mb-05">
+                <div className="relative mr-04">
+                  <div className="w-12 h-12 bg-gray-10 border border-gray-30 flex items-center justify-center">
+                    <Zap className="w-6 h-6 text-gray-70" />
                   </div>
-                  <p className="text-body-01 text-gray-70 mb-05 font-medium">2 weeks · US$1,200 · 50% upfront</p>
+                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-gray-90 flex items-center justify-center">
+                    <Activity className="w-2 h-2 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-heading-04 font-semibold text-gray-100 leading-tight mb-01">Integration Sprint</h3>
+                  <p className="text-body-01 text-gray-70 font-medium">2 weeks · US$1,200 · 50% upfront</p>
                 </div>
               </div>
 
@@ -264,17 +334,19 @@ export default function Home() {
                 Enterprise
               </div>
 
-              <div className="flex items-start justify-between mb-05">
-                <div className="flex-1">
-                  <div className="flex items-center mb-03">
-                    <div className="w-08 h-08 bg-gray-90 flex items-center justify-center mr-04">
-                      <span className="text-white font-bold text-caption-02">$3K</span>
-                    </div>
-                    <div>
-                      <h3 className="text-heading-04 font-semibold text-gray-100 leading-tight">SaaS Backend Starter</h3>
-                    </div>
+              {/* Professional service icon */}
+              <div className="flex items-center mb-05">
+                <div className="relative mr-04">
+                  <div className="w-12 h-12 bg-gray-10 border border-gray-30 flex items-center justify-center">
+                    <Database className="w-6 h-6 text-gray-70" />
                   </div>
-                  <p className="text-body-01 text-gray-70 mb-05 font-medium">3–4 weeks · US$3,000 · 50% upfront</p>
+                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-gray-90 flex items-center justify-center">
+                    <Lock className="w-2 h-2 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-heading-04 font-semibold text-gray-100 leading-tight mb-01">SaaS Backend Starter</h3>
+                  <p className="text-body-01 text-gray-70 font-medium">3–4 weeks · US$3,000 · 50% upfront</p>
                 </div>
               </div>
 
@@ -354,9 +426,46 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Subtle geometric elements */}
-        <div className="absolute top-10 right-10 w-32 h-32 bg-white/5 transform rotate-12 hidden lg:block"></div>
-        <div className="absolute bottom-10 left-10 w-24 h-24 bg-blue-40/10 transform -rotate-12 hidden lg:block"></div>
+        {/* Professional geometric elements and patterns */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Grid pattern */}
+          <div className="absolute inset-0 opacity-[0.03]" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='m0 40h40v-40h-40v40zm20-20v20h20v-20h-20z'/%3E%3C/g%3E%3C/svg%3E")`,
+          }}></div>
+
+          {/* Floating elements */}
+          <div className="absolute top-10 right-10 w-32 h-32 border-2 border-white/10 transform rotate-12 hidden lg:block">
+            <div className="w-full h-full border border-white/5 transform rotate-6">
+              <div className="w-full h-full bg-gradient-to-br from-blue-40/10 to-transparent"></div>
+            </div>
+          </div>
+
+          <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/5 transform -rotate-12 hidden lg:block">
+            <div className="absolute inset-2 border border-blue-40/20"></div>
+            <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-blue-40/30 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+          </div>
+
+          {/* Circuit-like connecting lines */}
+          <div className="absolute top-1/4 left-0 w-16 h-px bg-gradient-to-r from-transparent to-white/20 hidden lg:block"></div>
+          <div className="absolute bottom-1/4 right-0 w-16 h-px bg-gradient-to-l from-transparent to-white/20 hidden lg:block"></div>
+          <div className="absolute top-1/2 right-1/4 w-px h-16 bg-gradient-to-b from-white/20 to-transparent hidden lg:block"></div>
+
+          {/* Subtle data visualization elements */}
+          <div className="absolute top-16 left-1/4 hidden lg:block">
+            <div className="flex space-x-1">
+              <div className="w-1 h-8 bg-blue-40/20"></div>
+              <div className="w-1 h-12 bg-blue-40/30"></div>
+              <div className="w-1 h-6 bg-blue-40/20"></div>
+              <div className="w-1 h-10 bg-blue-40/25"></div>
+            </div>
+          </div>
+
+          <div className="absolute bottom-16 right-1/3 hidden lg:block">
+            <div className="w-16 h-16 border border-white/10 transform rotate-45">
+              <div className="absolute inset-2 bg-gradient-to-br from-white/5 to-transparent"></div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
