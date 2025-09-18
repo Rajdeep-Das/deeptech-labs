@@ -50,13 +50,30 @@ export default function Home() {
             <div className="flex items-center cursor-pointer">
               {/* Carbon-compliant Logo Icon */}
               <div className="mr-03">
-                <div className="w-8 h-8 bg-blue-60 flex items-center justify-center rounded-carbon">
-                  {/* Carbon-precise network pattern */}
-                  <div className="relative">
-                    <div className="w-2 h-2 bg-white rounded-carbon"></div>
-                    <div className="absolute -top-01 -left-01 w-1 h-1 bg-white opacity-50 rounded-carbon"></div>
-                    <div className="absolute -bottom-01 -right-01 w-1 h-1 bg-white opacity-50 rounded-carbon"></div>
-                  </div>
+                <div className="w-8 h-8 bg-blue-60 rounded-md flex items-center justify-center relative">
+                  {/* Clean network topology - thin lines, small nodes */}
+
+                  {/* Central node - much smaller */}
+                  <div className="w-1 h-1 bg-white rounded-full absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+
+                  {/* Satellite nodes - tiny clean dots */}
+                  <div className="w-01 h-01 bg-white rounded-full absolute top-02 left-02"></div>
+                  <div className="w-01 h-01 bg-white rounded-full absolute top-02 right-02"></div>
+                  <div className="w-01 h-01 bg-white rounded-full absolute bottom-02 left-02"></div>
+                  <div className="w-01 h-01 bg-white rounded-full absolute bottom-02 right-02"></div>
+
+                  {/* Ultra-thin connection lines */}
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 32 32">
+                    <g stroke="white" strokeWidth="0.3" opacity="0.5">
+                      <line x1="16" y1="16" x2="8" y2="8"/>
+                      <line x1="16" y1="16" x2="24" y2="8"/>
+                      <line x1="16" y1="16" x2="8" y2="24"/>
+                      <line x1="16" y1="16" x2="24" y2="24"/>
+                    </g>
+                  </svg>
+
+                  {/* Minimal accent - single dot */}
+                  <div className="w-01 h-01 bg-white opacity-30 absolute top-01 right-01"></div>
                 </div>
               </div>
 
