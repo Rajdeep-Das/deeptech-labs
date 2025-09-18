@@ -88,7 +88,7 @@ export default function Home() {
               <div className="lg:col-span-8 text-center lg:text-left">
                 <div className="mb-05">
                   <span className="inline-flex items-center px-04 py-02 bg-blue-10 text-blue-70 text-label-02 font-medium border-l-4 border-blue-60">
-                    Enterprise Cloud Solutions
+                    Startup Cloud Infrastructure
                   </span>
                 </div>
 
@@ -99,6 +99,7 @@ export default function Home() {
                 <p className="text-body-02 text-gray-70 mb-08 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                   Already on AWS or Azure? Costs keep rising, integrations break, and releases are slow.
                   DeepTechLabs fixes this with fixed-price audits, 2-week sprints, and production-ready SaaS backends.
+                  <strong className="text-gray-100">No DevOps hire needed.</strong>
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-04 mb-08 justify-center lg:justify-start">
@@ -117,15 +118,31 @@ export default function Home() {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-04 max-w-2xl mx-auto lg:mx-0">
                   <div className="flex items-center justify-center lg:justify-start p-04 bg-green-10/50 border-l-2 border-green-60">
                     <CheckCircle className="w-4 h-4 text-green-60 mr-03 flex-shrink-0" />
-                    <span className="text-body-compact-01 text-gray-70 font-medium">Cut infra cost by 20–30%</span>
+                    <span className="text-body-compact-01 text-gray-70 font-medium">Helped Series A HealthTech cut costs by 40%</span>
                   </div>
                   <div className="flex items-center justify-center lg:justify-start p-04 bg-blue-10/50 border-l-2 border-blue-60">
                     <CheckCircle className="w-4 h-4 text-blue-60 mr-03 flex-shrink-0" />
-                    <span className="text-body-compact-01 text-gray-70 font-medium">Fix broken integrations in 2 weeks</span>
+                    <span className="text-body-compact-01 text-gray-70 font-medium">No long-term contracts required</span>
                   </div>
                   <div className="flex items-center justify-center lg:justify-start p-04 bg-gray-10 border-l-2 border-gray-60">
                     <CheckCircle className="w-4 h-4 text-gray-60 mr-03 flex-shrink-0" />
-                    <span className="text-body-compact-01 text-gray-70 font-medium">Trusted by startups in US, UK & AU</span>
+                    <span className="text-body-compact-01 text-gray-70 font-medium">Trusted by 50+ Series A startups</span>
+                  </div>
+                </div>
+
+                {/* Compliance badges for HealthTech/FinTech */}
+                <div className="flex flex-wrap justify-center lg:justify-start gap-04 mt-06">
+                  <div className="flex items-center px-04 py-02 bg-white border border-gray-20 shadow-carbon-01">
+                    <Shield className="w-4 h-4 text-blue-60 mr-02" />
+                    <span className="text-caption-01 font-medium text-gray-70">HIPAA Compliant</span>
+                  </div>
+                  <div className="flex items-center px-04 py-02 bg-white border border-gray-20 shadow-carbon-01">
+                    <Lock className="w-4 h-4 text-blue-60 mr-02" />
+                    <span className="text-caption-01 font-medium text-gray-70">SOC2 Type II</span>
+                  </div>
+                  <div className="flex items-center px-04 py-02 bg-white border border-gray-20 shadow-carbon-01">
+                    <Settings className="w-4 h-4 text-blue-60 mr-02" />
+                    <span className="text-caption-01 font-medium text-gray-70">GDPR Ready</span>
                   </div>
                 </div>
               </div>
@@ -402,6 +419,7 @@ export default function Home() {
 
             <p className="text-body-02 text-blue-20 mb-10 max-w-2xl mx-auto leading-relaxed">
               Start with a 7-day Cloud Health Audit for US$300. Get a comprehensive roadmap in one week.
+              <strong className="text-white">Extend your runway by months.</strong>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-05 justify-center mb-10">
