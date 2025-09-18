@@ -132,70 +132,79 @@ export default function Home() {
 
               {/* Professional Illustration */}
               <div className="lg:col-span-4 flex justify-center lg:justify-end">
-                <div className="relative w-80 h-80">
-                  {/* Background geometric elements */}
-                  <div className="absolute inset-0">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-10 to-blue-20 border border-blue-30 transform rotate-3"></div>
-                    <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-gray-10 to-gray-20 border border-gray-30 transform -rotate-2"></div>
-                  </div>
-
-                  {/* Cloud architecture illustration */}
-                  <div className="absolute inset-6 bg-white border border-gray-20 shadow-carbon-04 p-05">
-                    {/* Header */}
-                    <div className="flex items-center justify-between mb-04 pb-02 border-b border-gray-20">
-                      <div className="text-label-02 font-semibold text-gray-100">Cloud Health Dashboard</div>
-                      <div className="w-2 h-2 bg-green-60 rounded-full"></div>
+                <div className="relative w-72 h-80">
+                  {/* Clean Carbon-compliant dashboard */}
+                  <div className="bg-white border border-gray-30 shadow-carbon-03 p-06 h-full">
+                    {/* Header with IBM-style branding */}
+                    <div className="flex items-center justify-between mb-05 pb-03 border-b border-gray-20">
+                      <div className="flex items-center space-x-02">
+                        <Cloud className="w-4 h-4 text-blue-60" />
+                        <span className="text-label-02 font-semibold text-gray-100">Cloud Health</span>
+                      </div>
+                      <div className="flex items-center space-x-01">
+                        <div className="w-2 h-2 bg-green-60"></div>
+                        <span className="text-caption-01 text-gray-70">Live</span>
+                      </div>
                     </div>
 
-                    {/* Charts and metrics */}
-                    <div className="space-y-03">
-                      {/* Cost savings chart */}
-                      <div className="flex items-center justify-between">
-                        <span className="text-caption-02 text-gray-70">Cost Savings</span>
-                        <div className="flex items-center">
-                          <div className="w-12 h-1 bg-green-60 mr-02"></div>
-                          <span className="text-caption-02 font-semibold text-green-60">30%</span>
+                    {/* Carbon Design System metrics */}
+                    <div className="space-y-05 mb-06">
+                      {/* Cost optimization metric */}
+                      <div className="p-04 bg-gray-10 border-l-2 border-green-60">
+                        <div className="flex items-center justify-between mb-02">
+                          <span className="text-label-01 text-gray-70">Cost Optimization</span>
+                          <span className="text-heading-compact-02 font-semibold text-green-60">30%</span>
+                        </div>
+                        <div className="w-full h-01 bg-gray-20">
+                          <div className="w-3/4 h-full bg-green-60"></div>
                         </div>
                       </div>
 
-                      {/* Security score */}
-                      <div className="flex items-center justify-between">
-                        <span className="text-caption-02 text-gray-70">Security Score</span>
-                        <div className="flex items-center">
-                          <div className="w-10 h-1 bg-blue-60 mr-02"></div>
-                          <span className="text-caption-02 font-semibold text-blue-60">85%</span>
+                      {/* Security compliance */}
+                      <div className="p-04 bg-gray-10 border-l-2 border-blue-60">
+                        <div className="flex items-center justify-between mb-02">
+                          <span className="text-label-01 text-gray-70">Security Score</span>
+                          <span className="text-heading-compact-02 font-semibold text-blue-60">85%</span>
+                        </div>
+                        <div className="w-full h-01 bg-gray-20">
+                          <div className="w-4/5 h-full bg-blue-60"></div>
                         </div>
                       </div>
 
                       {/* Performance */}
-                      <div className="flex items-center justify-between">
-                        <span className="text-caption-02 text-gray-70">Performance</span>
-                        <div className="flex items-center">
-                          <div className="w-8 h-1 bg-yellow-500 mr-02"></div>
-                          <span className="text-caption-02 font-semibold text-yellow-600">75%</span>
+                      <div className="p-04 bg-gray-10 border-l-2 border-gray-60">
+                        <div className="flex items-center justify-between mb-02">
+                          <span className="text-label-01 text-gray-70">Performance</span>
+                          <span className="text-heading-compact-02 font-semibold text-gray-70">75%</span>
+                        </div>
+                        <div className="w-full h-01 bg-gray-20">
+                          <div className="w-3/4 h-full bg-gray-60"></div>
                         </div>
                       </div>
                     </div>
 
-                    {/* Central focus */}
-                    <div className="mt-05 pt-04 border-t border-gray-20 text-center">
-                      <div className="text-heading-04 font-semibold text-blue-60 mb-01">Cloud Audit</div>
-                      <div className="text-caption-02 text-gray-70 mb-02">7-day analysis</div>
-                      <div className="text-heading-05 font-bold text-gray-100">$300</div>
+                    {/* Primary action */}
+                    <div className="text-center pt-04 border-t border-gray-20">
+                      <div className="mb-03">
+                        <div className="text-heading-03 font-semibold text-gray-100 mb-01">$300</div>
+                        <div className="text-caption-02 text-gray-70">7-day audit</div>
+                      </div>
+                      <div className="w-full h-09 bg-blue-60 flex items-center justify-center">
+                        <span className="text-body-compact-02 font-medium text-white">Start Analysis</span>
+                      </div>
                     </div>
 
-                    {/* Server icons */}
-                    <div className="absolute bottom-02 right-02 flex space-x-01">
-                      <div className="w-2 h-2 bg-blue-60"></div>
-                      <div className="w-2 h-2 bg-gray-60"></div>
-                      <div className="w-2 h-2 bg-green-60"></div>
+                    {/* Status indicators */}
+                    <div className="absolute top-04 right-04 flex space-x-02">
+                      <div className="w-01 h-01 bg-green-60"></div>
+                      <div className="w-01 h-01 bg-blue-60"></div>
+                      <div className="w-01 h-01 bg-gray-40"></div>
                     </div>
                   </div>
 
-                  {/* Floating elements */}
-                  <div className="absolute -top-2 -left-2 w-4 h-4 bg-blue-60 transform rotate-45"></div>
-                  <div className="absolute -bottom-2 -right-2 w-3 h-3 bg-green-60 rounded-full"></div>
-                  <div className="absolute top-1/2 -right-3 w-2 h-8 bg-gray-30"></div>
+                  {/* Minimal Carbon geometric accent */}
+                  <div className="absolute -top-01 -right-01 w-03 h-03 bg-blue-60"></div>
+                  <div className="absolute -bottom-01 -left-01 w-02 h-02 bg-gray-60"></div>
                 </div>
               </div>
             </div>
