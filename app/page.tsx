@@ -578,7 +578,7 @@ export default function Home() {
 
       {/* Final CTA Section */}
       <section className="relative py-16 lg:py-20 bg-gradient-to-b from-gray-90 to-gray-100 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-90/20 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-90/15 via-transparent to-transparent"></div>
 
         <div className="relative max-w-screen-lg mx-auto px-05 lg:px-06">
           <div className="text-center">
@@ -646,48 +646,19 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Professional geometric elements and patterns */}
+        {/* Reduced background elements - keep only essential ones */}
         <div className="absolute inset-0 overflow-hidden">
-          {/* Grid pattern */}
+          {/* Subtle grid pattern with reduced opacity */}
           <div
-            className="absolute inset-0 opacity-[0.03]"
+            className="absolute inset-0 opacity-[0.015]"
             style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='m0 40h40v-40h-40v40zm20-20v20h20v-20h-20z'/%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='m0 60h60v-60h-60v60zm30-30v30h30v-30h-30z'/%3E%3C/g%3E%3C/svg%3E")`,
             }}
           ></div>
 
-          {/* Floating elements */}
-          <div className="absolute top-10 right-10 w-32 h-32 border-2 border-white/10 transform rotate-12 hidden lg:block">
-            <div className="w-full h-full border border-white/5 transform rotate-6">
-              <div className="w-full h-full bg-gradient-to-br from-blue-40/10 to-transparent"></div>
-            </div>
-          </div>
-
-          <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/5 transform -rotate-12 hidden lg:block">
-            <div className="absolute inset-2 border border-blue-40/20"></div>
-            <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-blue-40/30 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
-          </div>
-
-          {/* Circuit-like connecting lines */}
-          <div className="absolute top-1/4 left-0 w-16 h-px bg-gradient-to-r from-transparent to-white/20 hidden lg:block"></div>
-          <div className="absolute bottom-1/4 right-0 w-16 h-px bg-gradient-to-l from-transparent to-white/20 hidden lg:block"></div>
-          <div className="absolute top-1/2 right-1/4 w-px h-16 bg-gradient-to-b from-white/20 to-transparent hidden lg:block"></div>
-
-          {/* Subtle data visualization elements */}
-          <div className="absolute top-16 left-1/4 hidden lg:block">
-            <div className="flex space-x-1">
-              <div className="w-1 h-8 bg-blue-40/20"></div>
-              <div className="w-1 h-12 bg-blue-40/30"></div>
-              <div className="w-1 h-6 bg-blue-40/20"></div>
-              <div className="w-1 h-10 bg-blue-40/25"></div>
-            </div>
-          </div>
-
-          <div className="absolute bottom-16 right-1/3 hidden lg:block">
-            <div className="w-16 h-16 border border-white/10 transform rotate-45">
-              <div className="absolute inset-2 bg-gradient-to-br from-white/5 to-transparent"></div>
-            </div>
-          </div>
+          {/* Minimal accent elements */}
+          <div className="absolute top-16 right-16 w-20 h-20 border border-white/5 transform rotate-12 hidden lg:block"></div>
+          <div className="absolute bottom-16 left-16 w-16 h-16 bg-white/3 transform -rotate-6 hidden lg:block"></div>
         </div>
       </section>
     </main>
