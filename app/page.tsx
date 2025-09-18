@@ -317,27 +317,6 @@ export default function Home() {
               Transparent, scoped, and outcome-driven — no surprises.
             </p>
 
-            {/* Compliance badges for HealthTech/FinTech */}
-            <div className="flex flex-wrap justify-center gap-04">
-              <div className="flex items-center px-04 py-02 bg-white border border-gray-20 shadow-carbon-01">
-                <Shield className="w-4 h-4 text-blue-60 mr-02" />
-                <span className="text-caption-01 font-medium text-gray-70">
-                  HIPAA Compliant
-                </span>
-              </div>
-              <div className="flex items-center px-04 py-02 bg-white border border-gray-20 shadow-carbon-01">
-                <Lock className="w-4 h-4 text-blue-60 mr-02" />
-                <span className="text-caption-01 font-medium text-gray-70">
-                  SOC2 Type II
-                </span>
-              </div>
-              <div className="flex items-center px-04 py-02 bg-white border border-gray-20 shadow-carbon-01">
-                <Settings className="w-4 h-4 text-blue-60 mr-02" />
-                <span className="text-caption-01 font-medium text-gray-70">
-                  GDPR Ready
-                </span>
-              </div>
-            </div>
           </div>
 
           {/* Services Grid */}
@@ -568,6 +547,13 @@ export default function Home() {
                   Enterprise-grade security
                 </span>
               </div>
+            </div>
+
+            {/* Subtle compliance note */}
+            <div className="mt-10 pt-06 border-t border-white/10 text-center">
+              <p className="text-caption-01 text-blue-30/80 font-medium">
+                Enterprise compliance available when needed: HIPAA, SOC2 Type II, GDPR
+              </p>
             </div>
           </div>
         </div>
