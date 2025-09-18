@@ -121,7 +121,7 @@ export default function Home() {
                   {/* CTA Button - Enhanced */}
                   <div className="pt-04">
                     <button
-                      className="w-full px-06 py-04 bg-gradient-to-r from-blue-60 to-blue-70 text-white hover:from-blue-70 hover:to-blue-80 transition-all duration-200 text-body-compact-02 font-semibold shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2 tracking-tight"
+                      className="w-full px-06 py-04 bg-blue-60 text-white hover:bg-blue-70 transition-colors text-body-compact-02 font-medium shadow-carbon-01 hover:shadow-carbon-02 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Book 30-min Call
