@@ -323,11 +323,22 @@ export default function Home() {
               {/* Attribution */}
               <div className="flex items-center pt-05 border-t border-gray-20">
                 <div className="flex items-center space-x-04">
-                  {/* Professional avatar placeholder */}
-                  <div className="w-12 h-12 bg-blue-10 border border-blue-30 flex items-center justify-center">
-                    <span className="text-blue-60 font-semibold text-body-compact-02">
-                      SB
-                    </span>
+                  {/* Professional avatar */}
+                  <div className="w-12 h-12 relative overflow-hidden bg-blue-10 border border-blue-30">
+                    <img
+                      src="/sb.jpg"
+                      alt="Dr. Sushanta Bhanja"
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.nextElementSibling.style.display = 'flex';
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-blue-10 border border-blue-30 items-center justify-center hidden">
+                      <span className="text-blue-60 font-semibold text-body-compact-02">
+                        SB
+                      </span>
+                    </div>
                   </div>
                   <div>
                     <div className="text-body-01 font-semibold text-gray-100">
