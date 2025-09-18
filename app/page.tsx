@@ -304,6 +304,59 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonial Section */}
+      <section className="relative py-12 lg:py-16 bg-gray-10/50">
+        <div className="max-w-screen-lg mx-auto px-05 lg:px-06">
+          <div className="text-center mb-10">
+            <span className="inline-flex items-center px-04 py-02 bg-white text-gray-70 text-label-02 font-medium border-l-4 border-blue-60 shadow-carbon-01">
+              Client Success
+            </span>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white border border-gray-20 shadow-carbon-03 p-07 lg:p-08">
+              {/* Quote */}
+              <blockquote className="text-body-02 text-gray-80 leading-relaxed mb-06">
+                "DeepTechLabs helped us cut our AWS costs from $5,200 to $1,390 per month — a 73% reduction. They also took full ownership of our AWS cloud and Kubernetes clusters, which freed our small team to focus on building AtomsLearning instead of firefighting infra issues. Their work was fast, reliable, and gave us peace of mind."
+              </blockquote>
+
+              {/* Attribution */}
+              <div className="flex items-center pt-05 border-t border-gray-20">
+                <div className="flex items-center space-x-04">
+                  {/* Professional avatar placeholder */}
+                  <div className="w-12 h-12 bg-blue-10 border border-blue-30 flex items-center justify-center">
+                    <span className="text-blue-60 font-semibold text-body-compact-02">
+                      SB
+                    </span>
+                  </div>
+                  <div>
+                    <div className="text-body-01 font-semibold text-gray-100">
+                      Dr. Sushanta Bhanja
+                    </div>
+                    <div className="text-caption-01 text-gray-70 font-medium">
+                      Founder of AtomsLearning • Medical EdTech • India
+                    </div>
+                  </div>
+                </div>
+
+                {/* Results highlight */}
+                <div className="ml-auto hidden lg:flex items-center space-x-06">
+                  <div className="text-center">
+                    <div className="text-heading-04 font-bold text-green-60">73%</div>
+                    <div className="text-caption-01 text-gray-70">Cost Reduction</div>
+                  </div>
+                  <div className="w-px h-08 bg-gray-20"></div>
+                  <div className="text-center">
+                    <div className="text-heading-04 font-bold text-blue-60">100%</div>
+                    <div className="text-caption-01 text-gray-70">Peace of Mind</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section
         id="services"
