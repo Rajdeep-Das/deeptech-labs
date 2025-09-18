@@ -101,19 +101,40 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile Menu - Refined Layout */}
           {mobileMenuOpen && (
-            <div className="md:hidden bg-white border-t border-gray-20 py-05 shadow-carbon-03">
-              <div className="space-y-04">
-                <a
-                  href="#services"
-                  className="block text-body-01 text-gray-70 hover:text-gray-100 py-02 font-medium"
-                >
-                  Services
-                </a>
-                <button className="w-full px-05 py-03 bg-blue-60 text-white hover:bg-blue-70 transition-colors text-body-compact-02 font-medium shadow-carbon-01">
-                  Book 30-min Call
-                </button>
+            <div className="md:hidden bg-white border-t border-gray-20 shadow-carbon-03">
+              <div className="px-05 py-06">
+                {/* Menu Items Container */}
+                <div className="space-y-06">
+                  {/* Navigation Link */}
+                  <div className="border-l-2 border-blue-60 pl-04">
+                    <a
+                      href="#services"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block text-body-02 text-gray-80 hover:text-blue-60 font-medium transition-colors tracking-tight"
+                    >
+                      Services
+                    </a>
+                  </div>
+
+                  {/* CTA Button - Enhanced */}
+                  <div className="pt-04">
+                    <button
+                      className="w-full px-06 py-04 bg-gradient-to-r from-blue-60 to-blue-70 text-white hover:from-blue-70 hover:to-blue-80 transition-all duration-200 text-body-compact-02 font-semibold shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2 tracking-tight"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Book 30-min Call
+                    </button>
+                  </div>
+                </div>
+
+                {/* Subtle Accent Line */}
+                <div className="mt-06 pt-04 border-t border-gray-20">
+                  <div className="flex justify-center">
+                    <div className="w-12 h-1 bg-gradient-to-r from-blue-60 to-transparent opacity-30 rounded-full"></div>
+                  </div>
+                </div>
               </div>
             </div>
           )}
