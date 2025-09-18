@@ -47,8 +47,32 @@ export default function Home() {
       >
         <div className="max-w-screen-lg mx-auto px-05 lg:px-06">
           <div className="flex items-center justify-between h-16">
-            <div className="text-heading-04 font-semibold text-gray-100 tracking-tight">
-              DeepTechLabs
+            <div className="flex items-center group cursor-pointer">
+              {/* Logo Icon */}
+              <div className="relative mr-03 group-hover:scale-105 transition-transform duration-200">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-60 to-blue-80 rounded-md flex items-center justify-center shadow-carbon-01">
+                  {/* Network pattern */}
+                  <div className="relative">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <div className="absolute -top-1 -left-1 w-1 h-1 bg-blue-30 rounded-full opacity-60"></div>
+                    <div className="absolute -bottom-1 -right-1 w-1 h-1 bg-blue-30 rounded-full opacity-60"></div>
+                    <div className="absolute top-0 -right-2 w-0.5 h-0.5 bg-blue-20 rounded-full opacity-40"></div>
+                  </div>
+                </div>
+                {/* Subtle glow effect */}
+                <div className="absolute inset-0 bg-blue-60 rounded-md opacity-20 blur-sm group-hover:opacity-30 transition-opacity"></div>
+              </div>
+
+              {/* Logo Text */}
+              <div className="text-heading-04 font-semibold text-gray-100 tracking-tight">
+                <span className="relative">
+                  Deep
+                  <span className="text-blue-60 font-bold">Tech</span>
+                  <span className="text-gray-80 font-normal tracking-wide">Labs</span>
+                  {/* Subtle accent line */}
+                  <div className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-60 to-transparent opacity-40"></div>
+                </span>
+              </div>
             </div>
 
             {/* Desktop Navigation */}
@@ -293,8 +317,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-05 left-1/2 transform -translate-x-1/2">
+        {/* Scroll indicator - hidden on mobile */}
+        <div className="absolute bottom-05 left-1/2 transform -translate-x-1/2 hidden lg:block">
           <button
             onClick={scrollToServices}
             className="group p-03 hover:bg-white hover:shadow-carbon-02 transition-all duration-200 border border-gray-20 bg-white/80 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2"
