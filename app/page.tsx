@@ -187,50 +187,74 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Carbon Design System metrics */}
-                    <div className="space-y-05 mb-06">
-                      {/* Cost optimization metric */}
+                    {/* Real ROI metrics with before/after */}
+                    <div className="space-y-04 mb-06">
+                      {/* AWS Cost Reduction */}
                       <div className="p-04 bg-gray-10 border-l-2 border-green-60">
                         <div className="flex items-center justify-between mb-02">
                           <span className="text-label-01 text-gray-70">
-                            Cost Optimization
+                            AWS Monthly Bill
                           </span>
-                          <span className="text-heading-compact-02 font-semibold text-green-60">
-                            30%
-                          </span>
+                          <div className="flex items-center space-x-02">
+                            <span className="text-caption-01 text-gray-50 line-through">
+                              $5,200
+                            </span>
+                            <span className="text-heading-compact-02 font-semibold text-green-60">
+                              $1,390
+                            </span>
+                          </div>
                         </div>
-                        <div className="w-full h-01 bg-gray-20">
-                          <div className="w-3/4 h-full bg-green-60"></div>
+                        <div className="w-full h-01 bg-gray-20 mb-01">
+                          <div className="w-1/4 h-full bg-green-60"></div>
+                        </div>
+                        <div className="text-caption-02 text-green-60 font-medium">
+                          73% reduction
                         </div>
                       </div>
 
-                      {/* Security compliance */}
+                      {/* Deploy Time Improvement */}
                       <div className="p-04 bg-gray-10 border-l-2 border-blue-60">
                         <div className="flex items-center justify-between mb-02">
                           <span className="text-label-01 text-gray-70">
-                            Security Score
+                            Deploy Time
                           </span>
-                          <span className="text-heading-compact-02 font-semibold text-blue-60">
-                            85%
-                          </span>
+                          <div className="flex items-center space-x-02">
+                            <span className="text-caption-01 text-gray-50 line-through">
+                              65m
+                            </span>
+                            <span className="text-heading-compact-02 font-semibold text-blue-60">
+                              12m
+                            </span>
+                          </div>
                         </div>
-                        <div className="w-full h-01 bg-gray-20">
-                          <div className="w-4/5 h-full bg-blue-60"></div>
+                        <div className="w-full h-01 bg-gray-20 mb-01">
+                          <div className="w-1/5 h-full bg-blue-60"></div>
+                        </div>
+                        <div className="text-caption-02 text-blue-60 font-medium">
+                          5.4x faster
                         </div>
                       </div>
 
-                      {/* Performance */}
+                      {/* Uptime Improvement */}
                       <div className="p-04 bg-gray-10 border-l-2 border-gray-60">
                         <div className="flex items-center justify-between mb-02">
                           <span className="text-label-01 text-gray-70">
-                            Performance
+                            System Uptime
                           </span>
-                          <span className="text-heading-compact-02 font-semibold text-gray-70">
-                            75%
-                          </span>
+                          <div className="flex items-center space-x-02">
+                            <span className="text-caption-01 text-gray-50 line-through">
+                              94.2%
+                            </span>
+                            <span className="text-heading-compact-02 font-semibold text-gray-100">
+                              99.8%
+                            </span>
+                          </div>
                         </div>
-                        <div className="w-full h-01 bg-gray-20">
-                          <div className="w-3/4 h-full bg-gray-60"></div>
+                        <div className="w-full h-01 bg-gray-20 mb-01">
+                          <div className="w-full h-full bg-gray-60"></div>
+                        </div>
+                        <div className="text-caption-02 text-gray-70 font-medium">
+                          60% fewer incidents
                         </div>
                       </div>
                     </div>
