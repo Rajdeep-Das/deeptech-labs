@@ -252,6 +252,9 @@ The $25K-$100K project range between freelancers ($5K-$25K) and big consulting (
 - Industry publication advertising
 - Retargeting campaigns
 
+### Target keywords: 
+ - "cloud health audit", "AWS cost optimization", "SaaS integration consulting"
+
 ---
 
 *Last Updated: 2025-09-19*
