@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtomsLearning: Scaling Medical EdTech Infrastructure</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* IBM Carbon Design System Implementation */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* IBM Color Tokens */
+            --cds-blue-60: #0f62fe;
+            --cds-blue-70: #0043ce;
+            --cds-blue-80: #002d9c;
+            --cds-gray-10: #f4f4f4;
+            --cds-gray-20: #e0e0e0;
+            --cds-gray-30: #c6c6c6;
+            --cds-gray-50: #8d8d8d;
+            --cds-gray-70: #525252;
+            --cds-gray-90: #262626;
+            --cds-gray-100: #161616;
+            --cds-white: #ffffff;
+            --cds-green-50: #24a148;
+            --cds-green-60: #198038;
+            --cds-red-50: #fa4d56;
+            --cds-red-60: #da1e28;
+            
+            /* IBM Spacing Scale (8px base unit) */
+            --cds-spacing-03: 0.5rem;  /* 8px */
+            --cds-spacing-05: 1rem;    /* 16px */
+            --cds-spacing-06: 1.5rem;  /* 24px */
+            --cds-spacing-07: 2rem;    /* 32px */
+            --cds-spacing-08: 2.5rem;  /* 40px */
+            --cds-spacing-09: 3rem;    /* 48px */
+            --cds-spacing-10: 4rem;    /* 64px */
+            --cds-spacing-12: 6rem;    /* 96px */
+            --cds-spacing-13: 10rem;   /* 160px */
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--cds-gray-100);
+            background-color: var(--cds-white);
+        }
+
+        /* IBM 16-column Grid System */
+        .cds-grid {
+            max-width: 1584px;
+            margin: 0 auto;
+            padding: 0 var(--cds-spacing-05);
+        }
+
+        .cds-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -var(--cds-spacing-03);
+        }
+
+        .cds-col-lg-16 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0 var(--cds-spacing-03);
+        }
+
+        .cds-col-lg-8 {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 var(--cds-spacing-03);
+        }
+
+        .cds-col-lg-4 {
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding: 0 var(--cds-spacing-03);
+        }
+
+        /* IBM Typography Scale */
+        .cds-heading-01 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 1.25rem;
+            letter-spacing: 0.16px;
+        }
+
+        .cds-heading-02 {
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.375rem;
+            letter-spacing: 0px;
+        }
+
+        .cds-heading-03 {
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.625rem;
+            letter-spacing: 0px;
+        }
+
+        .cds-heading-04 {
+            font-size: 1.75rem;
+            font-weight: 400;
+            line-height: 2.25rem;
+            letter-spacing: 0px;
+        }
+
+        .cds-heading-05 {
+            font-size: 2rem;
+            font-weight: 300;
+            line-height: 2.5rem;
+            letter-spacing: 0px;
+        }
+
+        .cds-heading-06 {
+            font-size: 2.625rem;
+            font-weight: 300;
+            line-height: 3.125rem;
+            letter-spacing: 0px;
+        }
+
+        .cds-heading-07 {
+            font-size: 3.375rem;
+            font-weight: 300;
+            line-height: 4rem;
+            letter-spacing: 0px;
+        }
+
+        .cds-body-01 {
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.25rem;
+            letter-spacing: 0.16px;
+        }
+
+        .cds-body-02 {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+            letter-spacing: 0px;
+        }
+
+        .cds-body-compact-01 {
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.125rem;
+            letter-spacing: 0.16px;
+        }
+
+        /* Header Section */
+        .hero-section {
+            background-color: var(--cds-gray-100);
+            color: var(--cds-white);
+            padding: var(--cds-spacing-13) 0 var(--cds-spacing-12);
+        }
+
+        .hero-title {
+            margin-bottom: var(--cds-spacing-06);
+        }
+
+        .hero-subtitle {
+            color: var(--cds-gray-30);
+            max-width: 640px;
+        }
+
+        /* Stats Bar - IBM Style */
+        .stats-section {
+            background-color: var(--cds-blue-60);
+            color: var(--cds-white);
+            padding: var(--cds-spacing-10) 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 0 var(--cds-spacing-05);
+        }
+
+        .stat-number {
+            font-size: 3.375rem;
+            font-weight: 300;
+            line-height: 4rem;
+            margin-bottom: var(--cds-spacing-03);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.125rem;
+            letter-spacing: 0.16px;
+            opacity: 0.75;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: var(--cds-spacing-12) 0;
+        }
+
+        .section-margin {
+            margin-bottom: var(--cds-spacing-12);
+        }
+
+        /* IBM Card Component */
+        .cds-card {
+            background-color: var(--cds-white);
+            border: 1px solid var(--cds-gray-20);
+            padding: var(--cds-spacing-08);
+            margin-bottom: var(--cds-spacing-06);
+        }
+
+        .cds-card--productive {
+            padding: var(--cds-spacing-07);
+        }
+
+        /* Challenge Card */
+        .challenge-card {
+            background-color: var(--cds-gray-10);
+            border-left: 4px solid var(--cds-red-50);
+            padding: var(--cds-spacing-08);
+        }
+
+        .challenge-title {
+            color: var(--cds-red-60);
+            margin-bottom: var(--cds-spacing-05);
+        }
+
+        /* Architecture Diagram */
+        .architecture-section {
+            background-color: var(--cds-gray-10);
+            padding: var(--cds-spacing-09);
+            margin: var(--cds-spacing-09) 0;
+        }
+
+        .arch-flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: var(--cds-spacing-08) 0;
+        }
+
+        .arch-box {
+            background-color: var(--cds-white);
+            border: 1px solid var(--cds-gray-30);
+            padding: var(--cds-spacing-07);
+            text-align: center;
+            width: 280px;
+        }
+
+        .arch-box--before {
+            border-left: 4px solid var(--cds-red-50);
+        }
+
+        .arch-box--after {
+            border-left: 4px solid var(--cds-green-50);
+        }
+
+        .arch-arrow {
+            font-size: 1.5rem;
+            color: var(--cds-blue-60);
+            font-weight: 300;
+            margin: 0 var(--cds-spacing-06);
+        }
+
+        /* Phase Cards */
+        .phase-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--cds-spacing-07);
+            margin: var(--cds-spacing-09) 0;
+        }
+
+        .phase-card {
+            background-color: var(--cds-white);
+            border: 1px solid var(--cds-gray-20);
+            padding: var(--cds-spacing-08);
+        }
+
+        .phase-number {
+            background-color: var(--cds-blue-60);
+            color: var(--cds-white);
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-bottom: var(--cds-spacing-06);
+        }
+
+        .phase-feature {
+            margin-bottom: var(--cds-spacing-05);
+        }
+
+        .phase-feature-title {
+            font-weight: 600;
+            margin-bottom: var(--cds-spacing-03);
+            color: var(--cds-gray-100);
+        }
+
+        .phase-feature-desc {
+            color: var(--cds-gray-70);
+        }
+
+        /* Technology Stack */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--cds-spacing-05);
+            margin: var(--cds-spacing-08) 0;
+        }
+
+        .tech-item {
+            background-color: var(--cds-gray-10);
+            border: 1px solid var(--cds-gray-20);
+            padding: var(--cds-spacing-06);
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* Results Grid */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--cds-spacing-07);
+            margin: var(--cds-spacing-09) 0;
+        }
+
+        .result-card {
+            background-color: var(--cds-white);
+            border: 1px solid var(--cds-gray-20);
+            padding: var(--cds-spacing-08);
+            text-align: center;
+        }
+
+        .result-metric {
+            font-size: 4.25rem;
+            font-weight: 300;
+            line-height: 4.875rem;
+            color: var(--cds-green-50);
+            margin-bottom: var(--cds-spacing-05);
+        }
+
+        /* Chart Styles */
+        .cost-chart {
+            background-color: var(--cds-white);
+            border: 1px solid var(--cds-gray-20);
+            padding: var(--cds-spacing-08);
+            margin: var(--cds-spacing-08) 0;
+        }
+
+        .chart-container {
+            height: 240px;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            gap: var(--cds-spacing-08);
+            margin: var(--cds-spacing-08) 0;
+        }
+
+        .chart-bar {
+            width: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .bar-before {
+            background-color: var(--cds-red-50);
+            height: 160px;
+            width: 100%;
+            margin-bottom: var(--cds-spacing-05);
+        }
+
+        .bar-after {
+            background-color: var(--cds-green-50);
+            height: 43px;
+            width: 100%;
+            margin-bottom: var(--cds-spacing-05);
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -2rem;
+            font-weight: 600;
+            color: var(--cds-gray-100);
+        }
+
+        .bar-label {
+            font-weight: 500;
+            color: var(--cds-gray-70);
+        }
+
+        /* Testimonial */
+        .testimonial-section {
+            background-color: var(--cds-blue-60);
+            color: var(--cds-white);
+            padding: var(--cds-spacing-12) 0;
+            text-align: center;
+        }
+
+        .testimonial-quote {
+            max-width: 768px;
+            margin: 0 auto var(--cds-spacing-07);
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            color: var(--cds-gray-30);
+            font-weight: 500;
+        }
+
+        /* Key Insight Box */
+        .insight-box {
+            background-color: var(--cds-gray-10);
+            border-left: 4px solid var(--cds-blue-60);
+            padding: var(--cds-spacing-08);
+            margin: var(--cds-spacing-09) 0;
+        }
+
+        .insight-title {
+            color: var(--cds-blue-70);
+            margin-bottom: var(--cds-spacing-05);
+            text-align: center;
+        }
+
+        .insight-content {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        /* Impact Grid */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--cds-spacing-08);
+            background-color: var(--cds-gray-10);
+            padding: var(--cds-spacing-09);
+            margin: var(--cds-spacing-09) 0;
+        }
+
+        .impact-item {
+            text-align: center;
+        }
+
+        .impact-title {
+            color: var(--cds-green-60);
+            font-weight: 600;
+            margin-bottom: var(--cds-spacing-03);
+        }
+
+        /* Footer */
+        .footer-section {
+            background-color: var(--cds-gray-90);
+            color: var(--cds-white);
+            padding: var(--cds-spacing-10) 0;
+            text-align: center;
+        }
+
+        .footer-title {
+            margin-bottom: var(--cds-spacing-05);
+        }
+
+        .footer-text {
+            color: var(--cds-gray-30);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1056px) {
+            .cds-col-lg-8 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .cds-col-lg-4 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            
+            .phase-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 672px) {
+            .cds-col-lg-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .arch-flow {
+                flex-direction: column;
+                gap: var(--cds-spacing-06);
+            }
+            
+            .arch-arrow {
+                transform: rotate(90deg);
+            }
+            
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .chart-container {
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+                gap: var(--cds-spacing-06);
+            }
+            
+            .chart-bar {
+                width: 100px;
+                flex-direction: row;
+                align-items: end;
+            }
+            
+            .bar-before, .bar-after {
+                height: 60px;
+                margin-bottom: 0;
+                margin-right: var(--cds-spacing-05);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="cds-grid">
+            <div class="cds-row">
+                <div class="cds-col-lg-16">
+                    <h1 class="cds-heading-07 hero-title">Scaling Medical EdTech Infrastructure</h1>
+                    <p class="cds-heading-03 hero-subtitle">How AtomsLearning achieved 73% cost reduction while ensuring high availability during peak exam periods through strategic cloud architecture transformation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="cds-grid">
+            <div class="cds-row">
+                <div class="cds-col-lg-4">
+                    <div class="stat-item">
+                        <div class="stat-number">73%</div>
+                        <div class="stat-label">Cost Reduction</div>
+                    </div>
+                </div>
+                <div class="cds-col-lg-4">
+                    <div class="stat-item">
+                        <div class="stat-number">$3,810</div>
+                        <div class="stat-label">Monthly Savings</div>
+                    </div>
+                </div>
+                <div class="cds-col-lg-4">
+                    <div class="stat-item">
+                        <div class="stat-number">Zero</div>
+                        <div class="stat-label">Service Disruptions</div>
+                    </div>
+                </div>
+                <div class="cds-col-lg-4">
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Exam Period Uptime</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="content-section">
+        <div class="cds-grid">
+            <div class="cds-row">
+                <div class="cds-col-lg-16">
+                    <h2 class="cds-heading-05 section-margin">Executive Summary</h2>
+                </div>
+            </div>
+            <div class="cds-row">
+                <div class="cds-col-lg-8">
+                    <p class="cds-body-02 section-margin">AtomsLearning faced a critical infrastructure challenge that many rapidly growing EdTech platforms encounter: balancing massive traffic spikes during exam periods while maintaining cost efficiency during quieter preparation cycles.</p>
+                    
+                    <p class="cds-body-02 section-margin">The existing AWS EC2 infrastructure couldn't adapt to these dramatic usage patterns, resulting in poor performance during peak times and unnecessary costs during low-traffic periods.</p>
+                    
+                    <p class="cds-body-02">DeepTechLabs designed and implemented a dual-mode architecture that automatically transitions between high-performance EKS clusters during exams and cost-optimized K3s deployments during preparation periods.</p>
+                </div>
+                <div class="cds-col-lg-8">
+                    <div class="cost-chart">
+                        <h3 class="cds-heading-03" style="text-align: center; margin-bottom: var(--cds-spacing-06);">Monthly Infrastructure Investment</h3>
+                        <div class="chart-container">
+                            <div class="chart-bar">
+                                <div class="bar-value cds-body-compact-01">$5,200</div>
+                                <div class="bar-before"></div>
+                                <div class="bar-label cds-body-compact-01">Before</div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-value cds-body-compact-01">$1,390</div>
+                                <div class="bar-after"></div>
+                                <div class="bar-label cds-body-compact-01">After</div>
+                            </div>
+                        </div>
+                        <p class="cds-body-compact-01" style="text-align: center; color: var(--cds-gray-70);">73% reduction in monthly AWS spend</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="content-section" style="background-color: var(--cds-gray-10);">
+        <div class="cds-grid">
+            <div class="cds-row">
+                <div class="cds-col-lg-16">
+                    <h2 class="cds-heading-05 section-margin">The Challenge</h2>
+                    <p class="cds-heading-03" style="color: var(--cds-gray-70); margin-bottom: var(--cds-spacing-09);">Understanding the critical infrastructure pain points that were limiting platform growth</p>
+                </div>
+            </div>
+            <div class="cds-row">
+                <div class="cds-col-lg-8">
+                    <div class="challenge-card">
+                        <h3 class="cds-heading-03 challenge-title">Peak Traffic Overwhelm</h3>
+                        <p class="cds-body-02 section-margin">MockExam microservices experienced severe performance degradation during exam nights when student traffic surged unpredictably, creating critical service bottlenecks.</p>
+                        
+                        <h3 class="cds-heading-03 challenge-title" style="margin-top: var(--cds-spacing-07);">Infrastructure Rigidity</h3>
+                        <p class="cds-body-02 section-margin">Static EC2 deployment architecture couldn't scale elastically, leading to over-provisioning during quiet periods and under-provisioning during traffic peaks.</p>
+                        
+                        <h3 class="cds-heading-03 challenge-title" style="margin-top: var(--cds-spacing-07);">Cost Inefficiency</h3>
+                        <p class="cds-body-02">High fixed infrastructure costs maintained year-round, despite traffic patterns showing clear seasonal variations in platform usage and demand cycles.</p>
+                    </div>
+                </div>
+                <div class="cds-col-lg-8">
+                    <div class="architecture-section">
+                        <h3 class="cds-heading-03" style="text-align: center; margin-bottom: var(--cds-spacing-07);">Original Architecture Limitations</h3>
+                        <div class="cds-card--productive" style="background-color: white; margin-bottom: var(--cds-spacing-05);">
+                            <h4 class="cds-heading-02" style="color: var(--cds-red-60); margin-bottom: var(--cds-spacing-03);">Static EC2 Instances</h4>
+                            <p class="cds-body-01">Fixed capacity allocation regardless of actual demand patterns</p>
+                        </div>
+                        <div class="cds-card--productive" style="background-color: white; margin-bottom: var(--cds-spacing-05);">
+                            <h4 class="cds-heading-02" style="color: var(--cds-red-60); margin-bottom: var(--cds-spacing-03);">Manual Scaling Operations</h4>
+                            <p class="cds-body-01">Reactive responses to traffic spikes with significant lead times</p>
+                        </div>
+                        <div class="cds-card--productive" style="background-color: white;">
+                            <h4 class="cds-heading-02" style="color: var(--cds-red-60); margin-bottom: var(--cds-spacing-03);">Monolithic Deployment</h4>
+                            <p class="cds-body-01">Limited ability to scale individual service components independently</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Approach -->
+    <section class="content-section">
+        <div class="cds-grid">
+            <div class="cds-row">
+                <div class="cds-col-lg-16">
+                    <h2 class="cds-heading-05 section-margin">Strategic Approach</h2>
+                    <p class="cds-heading-03" style="color: var(--cds-gray-70); text-align: center; margin-bottom: var(--cds-spacing-09);">Designing a dual-mode architecture optimized for distinct operational patterns</p>
+                    <p class="cds-body-02" style="text-align: center; margin-bottom: var(--cds-spacing-09); max-width: 768px; margin-left: auto; margin-right: auto;">DeepTechLabs identified two critical operational modes requiring fundamentally different infrastructure approaches to optimize both performance and cost efficiency.</p>
+                </div>
+            </div>
+            <div class="cds-row">
+                <div class="cds-col-lg-16">
+                    <div class="architecture-section">
+                        <div class="arch-flow">
+                            <div class="arch-box arch-box--before">
+                                <h3 class="cds-heading-03" style="color: var(--cds-red-60); margin-bottom: var(--cds-spacing-05);">Exam Season Mode</h3>
+                                <p class="cds-body-01 section-margin">High traffic volumes with unpredictable usage spikes</p>
+                                <p class="cds-body-compact-01"><strong>Requires:</strong> Maximum elasticity and performance</p>
+                            </div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-box arch-box--after">
+                                <h3 class="cds-heading-03" style="color: var(--cds-green-60); margin-bottom: var(--cds-spacing-05);">Preparation Cycles</h3>
+                                <p class="cds-body-01 section-margin">Steady, predictable usage patterns</p>
+                                <p class="cds-body-compact-01"><strong>Requires:</strong> Cost optimization and efficiency</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cds-row">
+                <div class="cds-col-lg-16">
+                    <div class="insight-box">
+                        <h3 class="cds-heading-03 insight-title">Key Strategic Insight</h3>
+                        <p class="cds-body-02 insight-content">Rather than building one infrastructure to handle all scenarios, we designed two complementary systems that automatically transition based on demand patterns and scheduling, delivering optimal performance and cost efficiency for each operational mode.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Architecture -->
+    <section class="content-section" style="background-color: var(--cds-gray-10);">
+        <div class="cds-grid">
+            <div class="cds-row">
+                <div class="cds-col-lg-16">
+                    <h2 class="cds-heading-05 section-margin">Solution Architecture</h2>
+                    <p class="cds-heading-03" style="color: var(--cds-gray-70); margin-bottom: var(--cds-spacing-09);">Two-phase implementation delivering both peak performance and cost efficiency</p>
+                </div>
+            </div>
+            <div class="cds-row">
+                <div class="cds-col-lg-16">
+                    <div class="phase-grid">
+                        <div class="phase-card">
+                            <div class="phase-number cds-heading-02">1</div>
+                            <h3 class="cds-heading-04" style="color: var(--cds-blue-70); margin-bottom: var(--cds-spacing-06);">Amazon EKS for Peak Performance</h3>
+                            
+                            <div class="phase-feature">
+                                <div class="phase-feature-title cds-heading-02">Containerized Workloads</div>
+                                <p class="phase-feature-desc cds-body-01">Complete microservices containerization enabling granular scaling and resource optimization</p>
+                            </div>
+                            
+                            <div class="phase-feature">
+                                <div class="phase-feature-title cds-heading-02">Horizontal Pod Autoscaling</div>
+                                <p class="phase-feature-desc cds-body-01">Automatic scaling based on CPU, memory, and custom application metrics</p>
+                            </div>
+                            
+                            <div class="phase-feature">
+                                <div class="phase-feature-title cds-heading-02">CI/CD Integration</div>
+                                <p class="phase-feature-desc cds-body-01">Seamless deployment pipelines with instant rollback capabilities for rapid iteration</p>
+                            </div>
+                        </div>
+
+                        <div class="phase-card">
+                            <div class="phase-number cds-heading-02">2</div>
+                            <h3 class="cds-heading-04" style="color: var(--cds-blue-70); margin-bottom: var(--cds-spacing-06);">K3s on EC2 for Cost Efficiency</h3>
+                            
+                            <div class="phase-feature">
+                                <div class="phase-feature-title cds-heading-02">Lightweight Kubernetes</div>
+                                <p class="phase-feature-desc cds-body-01">K3s deployment reducing operational overhead by 60% while maintaining functionality</p>
+                            </div>
+                            
+                            <div class="phase-feature">
+                                <div class="phase-feature-title cds-heading-02">ARM Graviton2 Instances</div>
+                                <p class="phase-feature-desc cds-body-01">Cost-efficient compute infrastructure with 20% better price-performance ratio</p>
+                            </div>
+                            
+                            <div class="phase-feature">
+                                <div class="phase-feature-title cds-heading-02">Demand-Aligned Scaling</div>
+                                <p class="phase-feature-desc cds-body-01">Automated scaling policies precisely matching resource allocation to actual demand</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cds-row">
+                <div class="cds-col-lg-16">
+                    <h3 class="cds-heading-03" style="margin: var(--cds-spacing-08) 0 var(--cds-spacing-06);">Technology Stack</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item cds-body-02">Amazon EKS</div>
+                        <div class="tech-item cds-body-02">K3s Kubernetes</div>
+                        <div class="tech-item cds-body-02">AWS Graviton2</div>
+                        <div class="tech-item cds-body-02">Horizontal Pod Autoscaler</div>
+                        <div class="tech-item cds-body-02">Container Registry</div>
+                        <div class="tech-item cds-body-02">Application Load Balancer</div>
+                        <div class="tech-item cds-body-02">CloudWatch Monitoring</div>
+                        <div class="tech-item cds-body-02">CI/CD Pipelines</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Measurable Impact -->
+    <section class="content-section">
+        <div class="cds-grid">
+            <div class="cds-row">
+                <div class="cds-col-lg-16">
+                    <h2 class="cds-heading-05 section-margin">Measurable Impact</h2>
+                    <p class="cds-heading-03" style="color: var(--cds-gray-70); margin-bottom: var(--cds-spacing-09);">Quantified improvements across cost, performance, and operational efficiency</p>
+                </div>
+            </div>
+            <div class="cds-row">
+                <div class="cds-col-lg-16">
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <div class="result-metric">73%</div>
+                            <h3 class="cds-heading-03" style="margin-bottom: var(--cds-spacing-03);">Cost Reduction</h3>
+                            <p class="cds-body-01" style="color: var(--cds-gray-70);">Monthly AWS spend decreased from $5,200 to $1,390</p>
+                        </div>
+
+                        <div class="result-card">
+                            <div class="result-metric">0</div>
+                            <h3 class="cds-heading-03" style="margin-bottom: var(--cds-spacing-03);">Downtime Events</h3>
+                            <p class="cds-body-01" style="color: var(--cds-gray-70);">Complete elimination of service disruptions during peak exam periods</p>
+                        </div>
+
+                        <div class="result-card">
+                            <div class="result-metric">60%</div>
+                            <h3 class="cds-heading-03" style="margin-bottom: var(--cds-spacing-03);">Operational Overhead</h3>
+                            <p class="cds-body-01" style="color: var(--cds-gray-70);">Reduced complexity in day-to-day infrastructure management tasks</p>
+                        </div>
+
+                        <div class="result-card">
+                            <div class="result-metric">100%</div>
+                            <h3 class="cds-heading-03" style="margin-bottom: var(--cds-spacing-03);">Team Focus Shift</h3>
+                            <p class="cds-body-01" style="color: var(--cds-gray-70);">Engineering team freed from infrastructure concerns to focus on product development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cds-row">
+                <div class="cds-col-lg-16">
+                    <div class="impact-grid">
+                        <div class="impact-item">
+                            <h3 class="cds-heading-03 impact-title">Elastic Scaling</h3>
+                            <p class="cds-body-01" style="color: var(--cds-gray-70);">Automatic adaptation to traffic patterns without manual intervention or service degradation</p>
+                        </div>
+                        <div class="impact-item">
+                            <h3 class="cds-heading-03 impact-title">Simplified Operations</h3>
+                            <p class="cds-body-01" style="color: var(--cds-gray-70);">Streamlined infrastructure management during non-peak periods with reduced operational complexity</p>
+                        </div>
+                        <div class="impact-item">
+                            <h3 class="cds-heading-03 impact-title">Growth Enablement</h3>
+                            <p class="cds-body-01" style="color: var(--cds-gray-70);">Confidence to scale user base without infrastructure limitations or performance concerns</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial-section">
+        <div class="cds-grid">
+            <div class="cds-row">
+                <div class="cds-col-lg-16">
+                    <blockquote class="cds-heading-04 testimonial-quote">
+                        "DeepTechLabs helped us cut costs and stabilize our platform at the same time. They took full ownership of our AWS & Kubernetes setup, which gave us confidence to grow without worrying about scaling issues."
+                    </blockquote>
+                    <cite class="cds-body-02 testimonial-author">
+                        — Founder, AtomsLearning (Medical EdTech, UK)
+                    </cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer-section">
+        <div class="cds-grid">
+            <div class="cds-row">
+                <div class="cds-col-lg-16">
+                    <h3 class="cds-heading-04 footer-title">Ready to optimize your infrastructure?</h3>
+                    <p class="cds-body-02 footer-text">Contact DeepTechLabs to discover how we can help your platform scale efficiently while reducing operational costs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

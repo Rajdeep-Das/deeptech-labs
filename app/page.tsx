@@ -424,6 +424,158 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Case Study Section */}
+      <section className="relative py-16 lg:py-20 bg-white">
+        <div className="max-w-screen-lg mx-auto px-05 lg:px-06">
+          {/* Section Header */}
+          <div className="text-center mb-12 lg:mb-16">
+            <div className="mb-05">
+              <span className="inline-flex items-center px-04 py-02 bg-blue-10 text-blue-70 text-label-02 font-medium border-l-4 border-blue-60">
+                Success Story
+              </span>
+            </div>
+            <h2 className="text-fluid-heading-05 font-semibold text-gray-100 mb-05 tracking-tight">
+              AtomsLearning: 73% Cost Reduction Case Study
+            </h2>
+            <p className="text-body-02 text-gray-70 max-w-2xl mx-auto leading-relaxed">
+              How we helped a medical EdTech platform scale infrastructure while cutting AWS costs from $5,200 to $1,390 per month
+            </p>
+          </div>
+
+          {/* Stats Bar */}
+          <div className="bg-blue-60 text-white py-08 px-06 mb-12 lg:mb-16">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-06 text-center">
+              <div>
+                <div className="text-heading-05 font-light mb-02">73%</div>
+                <div className="text-caption-01 opacity-75">Cost Reduction</div>
+              </div>
+              <div>
+                <div className="text-heading-05 font-light mb-02">$3,810</div>
+                <div className="text-caption-01 opacity-75">Monthly Savings</div>
+              </div>
+              <div>
+                <div className="text-heading-05 font-light mb-02">Zero</div>
+                <div className="text-caption-01 opacity-75">Service Disruptions</div>
+              </div>
+              <div>
+                <div className="text-heading-05 font-light mb-02">100%</div>
+                <div className="text-caption-01 opacity-75">Exam Period Uptime</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Challenge & Solution Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-08 mb-12">
+            {/* Challenge */}
+            <div className="bg-gray-10 border-l-4 border-red-50 p-06">
+              <h3 className="text-heading-04 text-red-60 mb-05">The Challenge</h3>
+              <div className="space-y-04">
+                <div>
+                  <h4 className="text-heading-02 text-red-60 mb-02">Peak Traffic Overwhelm</h4>
+                  <p className="text-body-compact-01 text-gray-70">MockExam microservices experienced severe performance degradation during exam nights when student traffic surged unpredictably.</p>
+                </div>
+                <div>
+                  <h4 className="text-heading-02 text-red-60 mb-02">Infrastructure Rigidity</h4>
+                  <p className="text-body-compact-01 text-gray-70">Static EC2 deployment couldn't scale elastically, leading to over-provisioning during quiet periods.</p>
+                </div>
+                <div>
+                  <h4 className="text-heading-02 text-red-60 mb-02">Cost Inefficiency</h4>
+                  <p className="text-body-compact-01 text-gray-70">High fixed infrastructure costs maintained year-round despite clear seasonal usage variations.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Solution */}
+            <div className="bg-gray-10 border-l-4 border-green-50 p-06">
+              <h3 className="text-heading-04 text-green-60 mb-05">Our Solution</h3>
+              <div className="space-y-04">
+                <div>
+                  <h4 className="text-heading-02 text-green-60 mb-02">Dual-Mode Architecture</h4>
+                  <p className="text-body-compact-01 text-gray-70">Amazon EKS for peak performance during exams, K3s on EC2 for cost efficiency during preparation periods.</p>
+                </div>
+                <div>
+                  <h4 className="text-heading-02 text-green-60 mb-02">Horizontal Pod Autoscaling</h4>
+                  <p className="text-body-compact-01 text-gray-70">Automatic scaling based on CPU, memory, and custom application metrics with instant adaptation.</p>
+                </div>
+                <div>
+                  <h4 className="text-heading-02 text-green-60 mb-02">ARM Graviton2 Optimization</h4>
+                  <p className="text-body-compact-01 text-gray-70">Cost-efficient compute infrastructure with 20% better price-performance ratio.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Technology Stack */}
+          <div className="bg-gray-10 p-06 mb-12">
+            <h3 className="text-heading-04 text-gray-100 mb-06 text-center">Technology Stack</h3>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-04">
+              <div className="bg-white border border-gray-20 p-04 text-center">
+                <span className="text-body-02 font-medium">Amazon EKS</span>
+              </div>
+              <div className="bg-white border border-gray-20 p-04 text-center">
+                <span className="text-body-02 font-medium">K3s Kubernetes</span>
+              </div>
+              <div className="bg-white border border-gray-20 p-04 text-center">
+                <span className="text-body-02 font-medium">AWS Graviton2</span>
+              </div>
+              <div className="bg-white border border-gray-20 p-04 text-center">
+                <span className="text-body-02 font-medium">Horizontal Pod Autoscaler</span>
+              </div>
+              <div className="bg-white border border-gray-20 p-04 text-center">
+                <span className="text-body-02 font-medium">Container Registry</span>
+              </div>
+              <div className="bg-white border border-gray-20 p-04 text-center">
+                <span className="text-body-02 font-medium">Application Load Balancer</span>
+              </div>
+              <div className="bg-white border border-gray-20 p-04 text-center">
+                <span className="text-body-02 font-medium">CloudWatch Monitoring</span>
+              </div>
+              <div className="bg-white border border-gray-20 p-04 text-center">
+                <span className="text-body-02 font-medium">CI/CD Pipelines</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Results Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-08 mb-12">
+            <div className="bg-white border border-gray-20 shadow-carbon-02 p-06 text-center">
+              <div className="text-heading-06 font-light text-green-60 mb-03">73%</div>
+              <h3 className="text-heading-04 text-gray-100 mb-03">Cost Reduction</h3>
+              <p className="text-body-01 text-gray-70">Monthly AWS spend decreased from $5,200 to $1,390</p>
+            </div>
+            <div className="bg-white border border-gray-20 shadow-carbon-02 p-06 text-center">
+              <div className="text-heading-06 font-light text-green-60 mb-03">0</div>
+              <h3 className="text-heading-04 text-gray-100 mb-03">Downtime Events</h3>
+              <p className="text-body-01 text-gray-70">Complete elimination of service disruptions during peak exam periods</p>
+            </div>
+          </div>
+
+          {/* Testimonial Quote */}
+          <div className="bg-blue-60 text-white p-08 text-center">
+            <blockquote className="text-heading-04 mb-06 max-w-3xl mx-auto font-light italic">
+              "DeepTechLabs helped us cut costs and stabilize our platform at the same time. They took full ownership of our AWS & Kubernetes setup, which gave us confidence to grow without worrying about scaling issues."
+            </blockquote>
+            <cite className="text-body-02 opacity-75">
+              — Founder, AtomsLearning (Medical EdTech, UK)
+            </cite>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-12">
+            <p className="text-body-02 text-gray-70 mb-06">
+              Ready to optimize your infrastructure like AtomsLearning?
+            </p>
+            <a
+              href="<!-- STRIPE_PAYMENT_LINK -->"
+              className="inline-flex items-center justify-center px-06 py-04 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2"
+            >
+              <span>Start Your 7-Day Audit — US$300</span>
+              <ArrowRight className="ml-03 w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section
         id="services"
