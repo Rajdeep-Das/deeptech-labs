@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { trackAuditBooking, trackServiceView, trackContactInteraction } from "@/lib/analytics";
 import {
   ChevronDown,
   Menu,
@@ -34,6 +35,7 @@ export default function Home() {
   const scrollToServices = () => {
     const servicesSection = document.getElementById("services");
     servicesSection?.scrollIntoView({ behavior: "smooth" });
+    trackServiceView('audit'); // Track when user actively seeks services
   };
 
   return (
@@ -202,12 +204,14 @@ export default function Home() {
                   <a
                     href="<!-- STRIPE_PAYMENT_LINK -->"
                     className="group inline-flex items-center justify-center px-06 py-04 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2"
+                    onClick={() => trackAuditBooking('hero-cta')}
                   >
                     <span>Book 7-Day Audit — US$300</span>
                   </a>
                   <a
                     href="<!-- SAMPLE_REPORT_LINK -->"
                     className="group inline-flex items-center justify-center px-06 py-04 border border-gray-30 text-gray-80 hover:bg-gray-10 hover:border-gray-40 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-01 hover:shadow-carbon-02 focus:outline-none focus:ring-2 focus:ring-gray-60 focus:ring-offset-2"
+                    onClick={() => trackContactInteraction('form')}
                   >
                     <span>See Example Audit Report</span>
                     <ArrowRight className="ml-03 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -731,6 +735,7 @@ export default function Home() {
             <a
               href="<!-- STRIPE_PAYMENT_LINK -->"
               className="inline-flex items-center justify-center px-06 py-04 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2"
+              onClick={() => trackAuditBooking('case-study-cta')}
             >
               <span>Start Your 7-Day Audit — US$300</span>
               <ArrowRight className="ml-03 w-4 h-4" />
@@ -829,6 +834,7 @@ export default function Home() {
               <a
                 href="<!-- STRIPE_PAYMENT_LINK -->"
                 className="group/btn w-full inline-flex items-center justify-center px-05 py-04 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2"
+                onClick={() => trackAuditBooking('services-audit-card')}
               >
                 <span>Pay & Start Audit</span>
                 <ArrowRight className="ml-02 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -972,6 +978,7 @@ export default function Home() {
               <a
                 href="<!-- STRIPE_PAYMENT_LINK -->"
                 className="group inline-flex items-center justify-center px-07 py-04 bg-white text-gray-100 hover:bg-gray-10 transition-all duration-200 text-body-compact-02 font-semibold shadow-carbon-04 hover:shadow-carbon-05 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-90"
+                onClick={() => trackAuditBooking('final-cta')}
               >
                 <span>Pay & Start Audit</span>
                 <ArrowRight className="ml-03 w-4 h-4 group-hover:translate-x-1 transition-transform" />
