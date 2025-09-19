@@ -94,6 +94,12 @@ export default function Home() {
               >
                 Services
               </a>
+              <a
+                href="/case-studies"
+                className="text-body-01 text-gray-70 hover:text-gray-100 transition-colors font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-60 after:transition-all hover:after:w-full"
+              >
+                Case Studies
+              </a>
               <button className="px-06 py-03 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-01 hover:shadow-carbon-02 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2">
                 Book 30-min Call
               </button>
@@ -118,7 +124,7 @@ export default function Home() {
               <div className="px-05 py-06">
                 {/* Menu Items Container */}
                 <div className="space-y-06">
-                  {/* Navigation Link */}
+                  {/* Navigation Links */}
                   <div className="border-l-2 border-blue-60 pl-04">
                     <a
                       href="#services"
@@ -126,6 +132,15 @@ export default function Home() {
                       className="block text-body-02 text-gray-80 hover:text-blue-60 font-medium transition-colors tracking-tight"
                     >
                       Services
+                    </a>
+                  </div>
+                  <div className="border-l-2 border-blue-60 pl-04">
+                    <a
+                      href="/case-studies"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block text-body-02 text-gray-80 hover:text-blue-60 font-medium transition-colors tracking-tight"
+                    >
+                      Case Studies
                     </a>
                   </div>
 
