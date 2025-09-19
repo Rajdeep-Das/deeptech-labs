@@ -63,12 +63,15 @@ export default function Home() {
                   <div className="w-01 h-01 bg-white rounded-full absolute bottom-02 right-02"></div>
 
                   {/* Ultra-thin connection lines */}
-                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 32 32">
+                  <svg
+                    className="absolute inset-0 w-full h-full"
+                    viewBox="0 0 32 32"
+                  >
                     <g stroke="white" strokeWidth="0.3" opacity="0.5">
-                      <line x1="16" y1="16" x2="8" y2="8"/>
-                      <line x1="16" y1="16" x2="24" y2="8"/>
-                      <line x1="16" y1="16" x2="8" y2="24"/>
-                      <line x1="16" y1="16" x2="24" y2="24"/>
+                      <line x1="16" y1="16" x2="8" y2="8" />
+                      <line x1="16" y1="16" x2="24" y2="8" />
+                      <line x1="16" y1="16" x2="8" y2="24" />
+                      <line x1="16" y1="16" x2="24" y2="24" />
                     </g>
                   </svg>
 
@@ -370,7 +373,12 @@ export default function Home() {
             <div className="bg-white border border-gray-20 shadow-carbon-03 p-07 lg:p-08">
               {/* Quote */}
               <blockquote className="text-body-02 text-gray-80 leading-relaxed mb-06">
-                "DeepTechLabs helped us cut our AWS costs from $5,200 to $1,390 per month — a 73% reduction. They also took full ownership of our AWS cloud and Kubernetes clusters, which freed our small team to focus on building AtomsLearning instead of firefighting infra issues. Their work was fast, reliable, and gave us peace of mind."
+                "DeepTechLabs helped us cut our AWS costs from $5,200 to $1,390
+                per month — a 73% reduction. They also took full ownership of
+                our AWS cloud and Kubernetes clusters, which freed our small
+                team to focus on building AtomsLearning instead of firefighting
+                infra issues. Their work was fast, reliable, and gave us peace
+                of mind."
               </blockquote>
 
               {/* Attribution */}
@@ -383,10 +391,11 @@ export default function Home() {
                       alt="Dr. Sushanta Bhanja"
                       className="w-full h-full object-cover"
                       onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        const nextSibling = e.currentTarget.nextElementSibling as HTMLElement;
+                        e.currentTarget.style.display = "none";
+                        const nextSibling = e.currentTarget
+                          .nextElementSibling as HTMLElement;
                         if (nextSibling) {
-                          nextSibling.style.display = 'flex';
+                          nextSibling.style.display = "flex";
                         }
                       }}
                     />
@@ -409,13 +418,21 @@ export default function Home() {
                 {/* Results highlight */}
                 <div className="ml-auto hidden lg:flex items-center space-x-06">
                   <div className="text-center">
-                    <div className="text-heading-04 font-bold text-green-60">73%</div>
-                    <div className="text-caption-01 text-gray-70">Cost Reduction</div>
+                    <div className="text-heading-04 font-bold text-green-60">
+                      73%
+                    </div>
+                    <div className="text-caption-01 text-gray-70">
+                      Cost Reduction
+                    </div>
                   </div>
                   <div className="w-px h-08 bg-gray-20"></div>
                   <div className="text-center">
-                    <div className="text-heading-04 font-bold text-blue-60">100%</div>
-                    <div className="text-caption-01 text-gray-70">Peace of Mind</div>
+                    <div className="text-heading-04 font-bold text-blue-60">
+                      100%
+                    </div>
+                    <div className="text-caption-01 text-gray-70">
+                      Peace of Mind
+                    </div>
                   </div>
                 </div>
               </div>
@@ -438,125 +455,250 @@ export default function Home() {
               AtomsLearning: 73% Cost Reduction Case Study
             </h2>
             <p className="text-body-02 text-gray-70 max-w-2xl mx-auto leading-relaxed">
-              How we helped a medical EdTech platform scale infrastructure while cutting AWS costs from $5,200 to $1,390 per month
+              How we helped a medical EdTech platform scale infrastructure while
+              cutting AWS costs from $5,200 to $1,390 per month
             </p>
           </div>
 
-          {/* Stats Bar */}
-          <div className="bg-blue-60 text-white py-08 px-06 mb-12 lg:mb-16">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-06 text-center">
-              <div>
-                <div className="text-heading-05 font-light mb-02">73%</div>
-                <div className="text-caption-01 opacity-75">Cost Reduction</div>
+          {/* Enhanced Stats Bar with Hover Effects */}
+          <div className="bg-blue-60 text-white py-08 px-06 mb-12 lg:mb-16 relative overflow-hidden">
+            {/* Subtle background pattern */}
+            <div className="absolute inset-0 opacity-5">
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3C/g%3E%3C/svg%3E")`,
+                }}
+              ></div>
+            </div>
+            <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-04 lg:gap-06 text-center">
+              <div className="group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:bg-white/10 p-03 lg:p-04 rounded-md">
+                <div className="text-heading-05 lg:text-heading-06 font-light mb-02 transition-all duration-300 group-hover:text-blue-20">
+                  73%
+                </div>
+                <div className="text-caption-01 opacity-75 group-hover:opacity-100 transition-opacity duration-300 text-xs lg:text-sm">
+                  Cost Reduction
+                </div>
+                <div className="w-0 h-0.5 bg-blue-20 mx-auto mt-02 transition-all duration-300 group-hover:w-6 lg:group-hover:w-8"></div>
               </div>
-              <div>
-                <div className="text-heading-05 font-light mb-02">$3,810</div>
-                <div className="text-caption-01 opacity-75">Monthly Savings</div>
+              <div className="group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:bg-white/10 p-03 lg:p-04 rounded-md">
+                <div className="text-heading-05 lg:text-heading-06 font-light mb-02 transition-all duration-300 group-hover:text-blue-20">
+                  $3,810
+                </div>
+                <div className="text-caption-01 opacity-75 group-hover:opacity-100 transition-opacity duration-300 text-xs lg:text-sm">
+                  Monthly Savings
+                </div>
+                <div className="w-0 h-0.5 bg-blue-20 mx-auto mt-02 transition-all duration-300 group-hover:w-6 lg:group-hover:w-8"></div>
               </div>
-              <div>
-                <div className="text-heading-05 font-light mb-02">Zero</div>
-                <div className="text-caption-01 opacity-75">Service Disruptions</div>
+              <div className="group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:bg-white/10 p-03 lg:p-04 rounded-md">
+                <div className="text-heading-05 lg:text-heading-06 font-light mb-02 transition-all duration-300 group-hover:text-blue-20">
+                  Zero
+                </div>
+                <div className="text-caption-01 opacity-75 group-hover:opacity-100 transition-opacity duration-300 text-xs lg:text-sm">
+                  Service Disruptions
+                </div>
+                <div className="w-0 h-0.5 bg-blue-20 mx-auto mt-02 transition-all duration-300 group-hover:w-6 lg:group-hover:w-8"></div>
               </div>
-              <div>
-                <div className="text-heading-05 font-light mb-02">100%</div>
-                <div className="text-caption-01 opacity-75">Exam Period Uptime</div>
+              <div className="group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:bg-white/10 p-03 lg:p-04 rounded-md">
+                <div className="text-heading-05 lg:text-heading-06 font-light mb-02 transition-all duration-300 group-hover:text-blue-20">
+                  100%
+                </div>
+                <div className="text-caption-01 opacity-75 group-hover:opacity-100 transition-opacity duration-300 text-xs lg:text-sm">
+                  Exam Period Uptime
+                </div>
+                <div className="w-0 h-0.5 bg-blue-20 mx-auto mt-02 transition-all duration-300 group-hover:w-6 lg:group-hover:w-8"></div>
               </div>
             </div>
           </div>
 
-          {/* Challenge & Solution Grid */}
+          {/* Enhanced Challenge & Solution Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-08 mb-12">
             {/* Challenge */}
-            <div className="bg-gray-10 border-l-4 border-red-50 p-06">
-              <h3 className="text-heading-04 text-red-60 mb-05">The Challenge</h3>
+            <div className="group bg-gray-10 border-l-4 border-red-50 p-06 transform transition-all duration-300 hover:shadow-carbon-03 hover:bg-red-10/20 relative overflow-hidden">
+              {/* Subtle animated accent */}
+              <div className="absolute top-0 left-0 w-1 h-0 bg-red-50 transition-all duration-500 group-hover:h-full"></div>
+              <h3 className="text-heading-04 text-red-60 mb-05 transition-colors duration-300 group-hover:text-red-70">
+                The Challenge
+              </h3>
               <div className="space-y-04">
-                <div>
-                  <h4 className="text-heading-02 text-red-60 mb-02">Peak Traffic Overwhelm</h4>
-                  <p className="text-body-compact-01 text-gray-70">MockExam microservices experienced severe performance degradation during exam nights when student traffic surged unpredictably.</p>
+                <div className="transform transition-all duration-300 group-hover:translate-x-1">
+                  <h4 className="text-heading-02 text-red-60 mb-02 transition-colors duration-300 group-hover:text-red-70">
+                    Peak Traffic Overwhelm
+                  </h4>
+                  <p className="text-body-compact-01 text-gray-70 transition-colors duration-300 group-hover:text-gray-80">
+                    MockExam microservices experienced severe performance
+                    degradation during exam nights when student traffic surged
+                    unpredictably.
+                  </p>
                 </div>
-                <div>
-                  <h4 className="text-heading-02 text-red-60 mb-02">Infrastructure Rigidity</h4>
-                  <p className="text-body-compact-01 text-gray-70">Static EC2 deployment couldn't scale elastically, leading to over-provisioning during quiet periods.</p>
+                <div className="transform transition-all duration-300 delay-75 group-hover:translate-x-1">
+                  <h4 className="text-heading-02 text-red-60 mb-02 transition-colors duration-300 group-hover:text-red-70">
+                    Infrastructure Rigidity
+                  </h4>
+                  <p className="text-body-compact-01 text-gray-70 transition-colors duration-300 group-hover:text-gray-80">
+                    Static EC2 deployment couldn't scale elastically, leading to
+                    over-provisioning during quiet periods.
+                  </p>
                 </div>
-                <div>
-                  <h4 className="text-heading-02 text-red-60 mb-02">Cost Inefficiency</h4>
-                  <p className="text-body-compact-01 text-gray-70">High fixed infrastructure costs maintained year-round despite clear seasonal usage variations.</p>
+                <div className="transform transition-all duration-300 delay-150 group-hover:translate-x-1">
+                  <h4 className="text-heading-02 text-red-60 mb-02 transition-colors duration-300 group-hover:text-red-70">
+                    Cost Inefficiency
+                  </h4>
+                  <p className="text-body-compact-01 text-gray-70 transition-colors duration-300 group-hover:text-gray-80">
+                    High fixed infrastructure costs maintained year-round
+                    despite clear seasonal usage variations.
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Solution */}
-            <div className="bg-gray-10 border-l-4 border-green-50 p-06">
-              <h3 className="text-heading-04 text-green-60 mb-05">Our Solution</h3>
+            <div className="group bg-gray-10 border-l-4 border-green-50 p-06 transform transition-all duration-300 hover:shadow-carbon-03 hover:bg-green-10/20 relative overflow-hidden">
+              {/* Subtle animated accent */}
+              <div className="absolute top-0 left-0 w-1 h-0 bg-green-50 transition-all duration-500 group-hover:h-full"></div>
+              <h3 className="text-heading-04 text-green-60 mb-05 transition-colors duration-300 group-hover:text-green-70">
+                Our Solution
+              </h3>
               <div className="space-y-04">
-                <div>
-                  <h4 className="text-heading-02 text-green-60 mb-02">Dual-Mode Architecture</h4>
-                  <p className="text-body-compact-01 text-gray-70">Amazon EKS for peak performance during exams, K3s on EC2 for cost efficiency during preparation periods.</p>
+                <div className="transform transition-all duration-300 group-hover:translate-x-1">
+                  <h4 className="text-heading-02 text-green-60 mb-02 transition-colors duration-300 group-hover:text-green-70">
+                    Dual-Mode Architecture
+                  </h4>
+                  <p className="text-body-compact-01 text-gray-70 transition-colors duration-300 group-hover:text-gray-80">
+                    Amazon EKS for peak performance during exams, K3s on EC2 for
+                    cost efficiency during preparation periods.
+                  </p>
                 </div>
-                <div>
-                  <h4 className="text-heading-02 text-green-60 mb-02">Horizontal Pod Autoscaling</h4>
-                  <p className="text-body-compact-01 text-gray-70">Automatic scaling based on CPU, memory, and custom application metrics with instant adaptation.</p>
+                <div className="transform transition-all duration-300 delay-75 group-hover:translate-x-1">
+                  <h4 className="text-heading-02 text-green-60 mb-02 transition-colors duration-300 group-hover:text-green-70">
+                    Horizontal Pod Autoscaling
+                  </h4>
+                  <p className="text-body-compact-01 text-gray-70 transition-colors duration-300 group-hover:text-gray-80">
+                    Automatic scaling based on CPU, memory, and custom
+                    application metrics with instant adaptation.
+                  </p>
                 </div>
-                <div>
-                  <h4 className="text-heading-02 text-green-60 mb-02">ARM Graviton2 Optimization</h4>
-                  <p className="text-body-compact-01 text-gray-70">Cost-efficient compute infrastructure with 20% better price-performance ratio.</p>
+                <div className="transform transition-all duration-300 delay-150 group-hover:translate-x-1">
+                  <h4 className="text-heading-02 text-green-60 mb-02 transition-colors duration-300 group-hover:text-green-70">
+                    ARM Graviton2 Optimization
+                  </h4>
+                  <p className="text-body-compact-01 text-gray-70 transition-colors duration-300 group-hover:text-gray-80">
+                    Cost-efficient compute infrastructure with 20% better
+                    price-performance ratio.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Technology Stack */}
+          {/* Enhanced Technology Stack */}
           <div className="bg-gray-10 p-06 mb-12">
-            <h3 className="text-heading-04 text-gray-100 mb-06 text-center">Technology Stack</h3>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-04">
-              <div className="bg-white border border-gray-20 p-04 text-center">
-                <span className="text-body-02 font-medium">Amazon EKS</span>
-              </div>
-              <div className="bg-white border border-gray-20 p-04 text-center">
-                <span className="text-body-02 font-medium">K3s Kubernetes</span>
-              </div>
-              <div className="bg-white border border-gray-20 p-04 text-center">
-                <span className="text-body-02 font-medium">AWS Graviton2</span>
-              </div>
-              <div className="bg-white border border-gray-20 p-04 text-center">
-                <span className="text-body-02 font-medium">Horizontal Pod Autoscaler</span>
-              </div>
-              <div className="bg-white border border-gray-20 p-04 text-center">
-                <span className="text-body-02 font-medium">Container Registry</span>
-              </div>
-              <div className="bg-white border border-gray-20 p-04 text-center">
-                <span className="text-body-02 font-medium">Application Load Balancer</span>
-              </div>
-              <div className="bg-white border border-gray-20 p-04 text-center">
-                <span className="text-body-02 font-medium">CloudWatch Monitoring</span>
-              </div>
-              <div className="bg-white border border-gray-20 p-04 text-center">
-                <span className="text-body-02 font-medium">CI/CD Pipelines</span>
+            <div>
+              <h3 className="text-heading-04 text-gray-100 mb-06 text-center">
+                Technology Stack
+              </h3>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-04">
+                <div className="group bg-white border border-gray-20 p-04 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-carbon-02 hover:border-blue-30 cursor-pointer">
+                  <span className="text-body-02 font-medium transition-colors duration-300 group-hover:text-blue-60">
+                    Amazon EKS
+                  </span>
+                  <div className="w-0 h-0.5 bg-blue-60 mx-auto mt-02 transition-all duration-300 group-hover:w-full"></div>
+                </div>
+                <div className="group bg-white border border-gray-20 p-04 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-carbon-02 hover:border-blue-30 cursor-pointer">
+                  <span className="text-body-02 font-medium transition-colors duration-300 group-hover:text-blue-60">
+                    K3s Kubernetes
+                  </span>
+                  <div className="w-0 h-0.5 bg-blue-60 mx-auto mt-02 transition-all duration-300 group-hover:w-full"></div>
+                </div>
+                <div className="group bg-white border border-gray-20 p-04 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-carbon-02 hover:border-blue-30 cursor-pointer">
+                  <span className="text-body-02 font-medium transition-colors duration-300 group-hover:text-blue-60">
+                    AWS Graviton2
+                  </span>
+                  <div className="w-0 h-0.5 bg-blue-60 mx-auto mt-02 transition-all duration-300 group-hover:w-full"></div>
+                </div>
+                <div className="group bg-white border border-gray-20 p-04 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-carbon-02 hover:border-blue-30 cursor-pointer">
+                  <span className="text-body-02 font-medium transition-colors duration-300 group-hover:text-blue-60">
+                    Horizontal Pod Autoscaler
+                  </span>
+                  <div className="w-0 h-0.5 bg-blue-60 mx-auto mt-02 transition-all duration-300 group-hover:w-full"></div>
+                </div>
+                <div className="group bg-white border border-gray-20 p-04 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-carbon-02 hover:border-blue-30 cursor-pointer">
+                  <span className="text-body-02 font-medium transition-colors duration-300 group-hover:text-blue-60">
+                    Container Registry
+                  </span>
+                  <div className="w-0 h-0.5 bg-blue-60 mx-auto mt-02 transition-all duration-300 group-hover:w-full"></div>
+                </div>
+                <div className="group bg-white border border-gray-20 p-04 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-carbon-02 hover:border-blue-30 cursor-pointer">
+                  <span className="text-body-02 font-medium transition-colors duration-300 group-hover:text-blue-60">
+                    Application Load Balancer
+                  </span>
+                  <div className="w-0 h-0.5 bg-blue-60 mx-auto mt-02 transition-all duration-300 group-hover:w-full"></div>
+                </div>
+                <div className="group bg-white border border-gray-20 p-04 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-carbon-02 hover:border-blue-30 cursor-pointer">
+                  <span className="text-body-02 font-medium transition-colors duration-300 group-hover:text-blue-60">
+                    CloudWatch Monitoring
+                  </span>
+                  <div className="w-0 h-0.5 bg-blue-60 mx-auto mt-02 transition-all duration-300 group-hover:w-full"></div>
+                </div>
+                <div className="group bg-white border border-gray-20 p-04 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-carbon-02 hover:border-blue-30 cursor-pointer">
+                  <span className="text-body-02 font-medium transition-colors duration-300 group-hover:text-blue-60">
+                    CI/CD Pipelines
+                  </span>
+                  <div className="w-0 h-0.5 bg-blue-60 mx-auto mt-02 transition-all duration-300 group-hover:w-full"></div>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Results Grid */}
+          {/* Enhanced Results Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-08 mb-12">
-            <div className="bg-white border border-gray-20 shadow-carbon-02 p-06 text-center">
-              <div className="text-heading-06 font-light text-green-60 mb-03">73%</div>
-              <h3 className="text-heading-04 text-gray-100 mb-03">Cost Reduction</h3>
-              <p className="text-body-01 text-gray-70">Monthly AWS spend decreased from $5,200 to $1,390</p>
+            <div className="group bg-white border border-gray-20 shadow-carbon-02 p-06 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-carbon-04 hover:border-green-30 relative overflow-hidden cursor-pointer">
+              {/* Gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-green-10/0 to-green-10/0 group-hover:from-green-10/20 group-hover:to-green-10/10 transition-all duration-300"></div>
+              <div className="relative">
+                <div className="text-heading-07 font-light text-green-60 mb-03 transition-all duration-300 group-hover:text-green-70 group-hover:scale-110">
+                  73%
+                </div>
+                <h3 className="text-heading-04 text-gray-100 mb-03 transition-colors duration-300 group-hover:text-green-70">
+                  Cost Reduction
+                </h3>
+                <p className="text-body-01 text-gray-70 transition-colors duration-300 group-hover:text-gray-80">
+                  Monthly AWS spend decreased from $5,200 to $1,390
+                </p>
+                {/* Animated underline */}
+                <div className="w-0 h-0.5 bg-green-60 mx-auto mt-04 transition-all duration-500 group-hover:w-16"></div>
+              </div>
             </div>
-            <div className="bg-white border border-gray-20 shadow-carbon-02 p-06 text-center">
-              <div className="text-heading-06 font-light text-green-60 mb-03">0</div>
-              <h3 className="text-heading-04 text-gray-100 mb-03">Downtime Events</h3>
-              <p className="text-body-01 text-gray-70">Complete elimination of service disruptions during peak exam periods</p>
+            <div className="group bg-white border border-gray-20 shadow-carbon-02 p-06 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-carbon-04 hover:border-green-30 relative overflow-hidden cursor-pointer">
+              {/* Gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-green-10/0 to-green-10/0 group-hover:from-green-10/20 group-hover:to-green-10/10 transition-all duration-300"></div>
+              <div className="relative">
+                <div className="text-heading-07 font-light text-green-60 mb-03 transition-all duration-300 group-hover:text-green-70 group-hover:scale-110">
+                  0
+                </div>
+                <h3 className="text-heading-04 text-gray-100 mb-03 transition-colors duration-300 group-hover:text-green-70">
+                  Downtime Events
+                </h3>
+                <p className="text-body-01 text-gray-70 transition-colors duration-300 group-hover:text-gray-80">
+                  Complete elimination of service disruptions during peak exam
+                  periods
+                </p>
+                {/* Animated underline */}
+                <div className="w-0 h-0.5 bg-green-60 mx-auto mt-04 transition-all duration-500 group-hover:w-16"></div>
+              </div>
             </div>
           </div>
 
           {/* Testimonial Quote */}
           <div className="bg-blue-60 text-white p-08 text-center">
             <blockquote className="text-heading-04 mb-06 max-w-3xl mx-auto font-light italic">
-              "DeepTechLabs helped us cut costs and stabilize our platform at the same time. They took full ownership of our AWS & Kubernetes setup, which gave us confidence to grow without worrying about scaling issues."
+              "DeepTechLabs helped us cut costs and stabilize our platform at
+              the same time. They took full ownership of our AWS & Kubernetes
+              setup, which gave us confidence to grow without worrying about
+              scaling issues."
             </blockquote>
             <cite className="text-body-02 opacity-75">
-              — Founder, AtomsLearning (Medical EdTech, UK)
+              — Founder, AtomsLearning (Medical EdTech, India)
             </cite>
           </div>
 
@@ -612,7 +754,6 @@ export default function Home() {
             <p className="text-body-02 text-gray-70 max-w-2xl mx-auto leading-relaxed mb-06">
               Transparent, scoped, and outcome-driven — no surprises.
             </p>
-
           </div>
 
           {/* Services Grid */}
@@ -848,7 +989,8 @@ export default function Home() {
             {/* Subtle compliance note */}
             <div className="mt-10 pt-06 border-t border-white/10 text-center">
               <p className="text-caption-01 text-blue-30/80 font-medium">
-                Enterprise compliance available when needed: HIPAA, SOC2 Type II, GDPR
+                Enterprise compliance available when needed: HIPAA, SOC2 Type
+                II, GDPR
               </p>
             </div>
           </div>
