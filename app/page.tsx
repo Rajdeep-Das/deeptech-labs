@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import {
   ChevronDown,
   Menu,
@@ -401,14 +402,19 @@ export default function Home() {
                 <div className="flex items-center space-x-04">
                   {/* Professional avatar */}
                   <div className="w-12 h-12 relative overflow-hidden bg-blue-10 border border-blue-30">
-                    <img
+                    <Image
                       src="/sb.jpg"
-                      alt="Dr. Sushanta Bhanja"
+                      alt="Dr. Sushanta Bhanja - Founder of AtomsLearning"
+                      width={48}
+                      height={48}
                       className="w-full h-full object-cover"
+                      priority={false}
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+Rw="
                       onError={(e) => {
-                        e.currentTarget.style.display = "none";
-                        const nextSibling = e.currentTarget
-                          .nextElementSibling as HTMLElement;
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = "none";
+                        const nextSibling = target.nextElementSibling as HTMLElement;
                         if (nextSibling) {
                           nextSibling.style.display = "flex";
                         }
