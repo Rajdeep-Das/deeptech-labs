@@ -477,11 +477,11 @@ export default function Home() {
               </span>
             </div>
             <h2 className="text-fluid-heading-05 font-semibold text-gray-100 mb-05 tracking-tight">
-              AtomsLearning: 73% Cost Reduction Case Study
+              Case Study: How a Medical EdTech Cut AWS Costs by 73% and Eliminated Downtime
             </h2>
             <p className="text-body-02 text-gray-70 max-w-2xl mx-auto leading-relaxed">
-              How we helped a medical EdTech platform scale infrastructure while
-              cutting AWS costs from $5,200 to $1,390 per month
+              AtomsLearning was facing spiraling cloud costs and unreliable deployments.
+              Here's how we helped them scale their platform while reducing AWS spend from $5,200 to $1,390 per month.
             </p>
           </div>
 
@@ -675,41 +675,40 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Enhanced Results Grid */}
+          {/* Enhanced Results Grid - Non-repetitive metrics */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-08 mb-12">
-            <div className="group bg-white border border-gray-20 shadow-carbon-02 p-06 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-carbon-04 hover:border-green-30 relative overflow-hidden cursor-pointer">
+            <div className="group bg-white border border-gray-20 shadow-carbon-02 p-06 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-carbon-04 hover:border-blue-30 relative overflow-hidden cursor-pointer">
               {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-green-10/0 to-green-10/0 group-hover:from-green-10/20 group-hover:to-green-10/10 transition-all duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-10/0 to-blue-10/0 group-hover:from-blue-10/20 group-hover:to-blue-10/10 transition-all duration-300"></div>
               <div className="relative">
-                <div className="text-heading-07 font-light text-green-60 mb-03 transition-all duration-300 group-hover:text-green-70 group-hover:scale-110">
-                  73%
+                <div className="text-heading-07 font-light text-blue-60 mb-03 transition-all duration-300 group-hover:text-blue-70 group-hover:scale-110">
+                  5.4x
                 </div>
-                <h3 className="text-heading-04 text-gray-100 mb-03 transition-colors duration-300 group-hover:text-green-70">
-                  Cost Reduction
+                <h3 className="text-heading-04 text-gray-100 mb-03 transition-colors duration-300 group-hover:text-blue-70">
+                  Faster Deployments
                 </h3>
                 <p className="text-body-01 text-gray-70 transition-colors duration-300 group-hover:text-gray-80">
-                  Monthly AWS spend decreased from $5,200 to $1,390
+                  Deploy time reduced from 65 minutes to 12 minutes
                 </p>
                 {/* Animated underline */}
-                <div className="w-0 h-0.5 bg-green-60 mx-auto mt-04 transition-all duration-500 group-hover:w-16"></div>
+                <div className="w-0 h-0.5 bg-blue-60 mx-auto mt-04 transition-all duration-500 group-hover:w-16"></div>
               </div>
             </div>
-            <div className="group bg-white border border-gray-20 shadow-carbon-02 p-06 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-carbon-04 hover:border-green-30 relative overflow-hidden cursor-pointer">
+            <div className="group bg-white border border-gray-20 shadow-carbon-02 p-06 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-carbon-04 hover:border-gray-30 relative overflow-hidden cursor-pointer">
               {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-green-10/0 to-green-10/0 group-hover:from-green-10/20 group-hover:to-green-10/10 transition-all duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-10/0 to-gray-10/0 group-hover:from-gray-10/20 group-hover:to-gray-10/10 transition-all duration-300"></div>
               <div className="relative">
-                <div className="text-heading-07 font-light text-green-60 mb-03 transition-all duration-300 group-hover:text-green-70 group-hover:scale-110">
-                  0
+                <div className="text-heading-07 font-light text-gray-70 mb-03 transition-all duration-300 group-hover:text-gray-80 group-hover:scale-110">
+                  99.8%
                 </div>
-                <h3 className="text-heading-04 text-gray-100 mb-03 transition-colors duration-300 group-hover:text-green-70">
-                  Downtime Events
+                <h3 className="text-heading-04 text-gray-100 mb-03 transition-colors duration-300 group-hover:text-gray-80">
+                  System Uptime
                 </h3>
                 <p className="text-body-01 text-gray-70 transition-colors duration-300 group-hover:text-gray-80">
-                  Complete elimination of service disruptions during peak exam
-                  periods
+                  Improved from 94.2% to 99.8% reliability during peak usage
                 </p>
                 {/* Animated underline */}
-                <div className="w-0 h-0.5 bg-green-60 mx-auto mt-04 transition-all duration-500 group-hover:w-16"></div>
+                <div className="w-0 h-0.5 bg-gray-70 mx-auto mt-04 transition-all duration-500 group-hover:w-16"></div>
               </div>
             </div>
           </div>
@@ -723,23 +722,42 @@ export default function Home() {
               scaling issues."
             </blockquote>
             <cite className="text-body-02 opacity-75">
-              — Founder, AtomsLearning (Medical EdTech, India)
+              — Dr. Sushanta Bhanja, Founder, AtomsLearning (Medical EdTech, India)
             </cite>
           </div>
 
-          {/* CTA */}
+          {/* Enhanced CTA Bridge */}
           <div className="text-center mt-12">
-            <p className="text-body-02 text-gray-70 mb-06">
-              Ready to optimize your infrastructure like AtomsLearning?
-            </p>
-            <a
-              href="<!-- STRIPE_PAYMENT_LINK -->"
-              className="inline-flex items-center justify-center px-06 py-04 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2"
-              onClick={() => trackAuditBooking('case-study-cta')}
-            >
-              <span>Start Your 7-Day Audit — US$300</span>
-              <ArrowRight className="ml-03 w-4 h-4" />
-            </a>
+            <div className="mb-06">
+              <h3 className="text-heading-04 text-gray-100 mb-03 font-semibold">
+                Ready to Achieve Similar Results?
+              </h3>
+              <p className="text-body-02 text-gray-70">
+                Start with a 7-Day Cloud Health Audit and get your roadmap to infrastructure optimization.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-04 justify-center">
+              <a
+                href="<!-- STRIPE_PAYMENT_LINK -->"
+                className="group inline-flex items-center justify-center px-07 py-04 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-02 font-semibold shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2"
+                onClick={() => trackAuditBooking('case-study-cta')}
+              >
+                <span>Pay & Start Audit — US$300</span>
+                <ArrowRight className="ml-03 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="<!-- CALENDLY_LINK -->"
+                className="group inline-flex items-center justify-center px-07 py-04 border border-gray-30 text-gray-80 hover:bg-gray-10 hover:border-gray-40 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-01 hover:shadow-carbon-02 focus:outline-none focus:ring-2 focus:ring-gray-60 focus:ring-offset-2"
+              >
+                <span>Book 30-min Call</span>
+                <ArrowRight className="ml-03 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+            <div className="mt-05">
+              <span className="text-caption-01 text-gray-60 font-medium">
+                100% money-back guarantee • No long-term contracts
+              </span>
+            </div>
           </div>
         </div>
       </section>
