@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -8,7 +8,6 @@ import {
   CheckCircle,
   AlertTriangle,
   TrendingDown,
-  TrendingUp,
   Clock,
   DollarSign,
   Shield,
@@ -23,14 +22,24 @@ import {
   FileText,
   Calendar,
   Globe,
+  Loader2,
 } from "lucide-react";
+import { downloadSampleReport } from "@/lib/pdfGenerator";
 
 export default function AuditReport() {
-  const [currentDate] = useState(new Date().toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-  }));
+  const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
+
+  const handleDownloadPDF = async () => {
+    setIsGeneratingPDF(true);
+    try {
+      await downloadSampleReport();
+    } catch (error) {
+      console.error('Failed to generate PDF:', error);
+      alert('Failed to generate PDF. Please try again.');
+    } finally {
+      setIsGeneratingPDF(false);
+    }
+  };
 
   return (
     <main className="min-h-screen bg-white text-gray-100 font-sans">
@@ -47,9 +56,17 @@ export default function AuditReport() {
             </Link>
 
             <div className="flex items-center space-x-04">
-              <button className="inline-flex items-center px-04 py-02 border border-gray-30 text-gray-80 hover:bg-gray-10 hover:border-gray-40 transition-all duration-200 text-body-compact-01 font-medium">
-                <Download className="w-4 h-4 mr-02" />
-                Download PDF
+              <button
+                onClick={handleDownloadPDF}
+                disabled={isGeneratingPDF}
+                className="inline-flex items-center px-04 py-02 border border-gray-30 text-gray-80 hover:bg-gray-10 hover:border-gray-40 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 text-body-compact-01 font-medium"
+              >
+                {isGeneratingPDF ? (
+                  <Loader2 className="w-4 h-4 mr-02 animate-spin" />
+                ) : (
+                  <Download className="w-4 h-4 mr-02" />
+                )}
+                {isGeneratingPDF ? 'Generating PDF...' : 'Download PDF'}
               </button>
               <button className="px-06 py-02 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-01 font-medium">
                 Book Implementation Sprint
@@ -60,7 +77,7 @@ export default function AuditReport() {
       </nav>
 
       {/* Report Container */}
-      <div className="max-w-screen-lg mx-auto px-05 lg:px-06 py-08">
+      <div id="audit-report-content" className="max-w-screen-lg mx-auto px-05 lg:px-06 py-08">
         {/* Report Header */}
         <div className="bg-white border border-gray-20 shadow-carbon-02 mb-06">
           {/* Header Bar */}
