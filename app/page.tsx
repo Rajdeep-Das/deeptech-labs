@@ -209,7 +209,7 @@ export default function Home() {
                     <span>Book 7-Day Audit — US$300</span>
                   </a>
                   <a
-                    href="<!-- SAMPLE_REPORT_LINK -->"
+                    href="/audit-report"
                     className="group inline-flex items-center justify-center px-06 py-04 border border-gray-30 text-gray-80 hover:bg-gray-10 hover:border-gray-40 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-01 hover:shadow-carbon-02 focus:outline-none focus:ring-2 focus:ring-gray-60 focus:ring-offset-2"
                     onClick={() => trackContactInteraction('form')}
                   >
