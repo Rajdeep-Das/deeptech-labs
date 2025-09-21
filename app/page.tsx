@@ -746,7 +746,9 @@ export default function Home() {
                 <ArrowRight className="ml-03 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
-                href="<!-- CALENDLY_LINK -->"
+                href="https://calendly.com/rajdeep-das/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center px-07 py-04 border border-gray-30 text-gray-80 hover:bg-gray-10 hover:border-gray-40 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-01 hover:shadow-carbon-02 focus:outline-none focus:ring-2 focus:ring-gray-60 focus:ring-offset-2"
               >
                 <span>Book 30-min Call</span>
@@ -1002,7 +1004,9 @@ export default function Home() {
                 <ArrowRight className="ml-03 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
-                href="<!-- CALENDLY_LINK -->"
+                href="https://calendly.com/rajdeep-das/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center px-07 py-04 border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-200 text-body-compact-02 font-medium backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-90"
               >
                 <span>Book a 30-min Call</span>
