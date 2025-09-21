@@ -9,9 +9,7 @@ import {
   X,
   ArrowRight,
   CheckCircle,
-  Shield,
   Zap,
-  Settings,
   Cloud,
   Database,
   Lock,
@@ -103,9 +101,14 @@ export default function Home() {
               >
                 Case Studies
               </a>
-              <button className="px-06 py-03 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-01 hover:shadow-carbon-02 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2">
+              <a
+                href="https://calendly.com/rajdeep-das/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-06 py-03 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-01 hover:shadow-carbon-02 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2 inline-block"
+              >
                 Book 30-min Call
-              </button>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -149,12 +152,15 @@ export default function Home() {
 
                   {/* CTA Button - Enhanced */}
                   <div className="pt-04">
-                    <button
-                      className="w-full px-06 py-04 bg-blue-60 text-white hover:bg-blue-70 transition-colors text-body-compact-02 font-medium shadow-carbon-01 hover:shadow-carbon-02 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2"
+                    <a
+                      href="https://calendly.com/rajdeep-das/30min"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full px-06 py-04 bg-blue-60 text-white hover:bg-blue-70 transition-colors text-body-compact-02 font-medium shadow-carbon-01 hover:shadow-carbon-02 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2 inline-block text-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Book 30-min Call
-                    </button>
+                    </a>
                   </div>
                 </div>
 
@@ -201,8 +207,10 @@ export default function Home() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-04 mb-08 justify-center lg:justify-start">
-                  <a
-                    href="<!-- STRIPE_PAYMENT_LINK -->"
+                                    <a
+                    href="https://calendly.com/rajdeep-das/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group inline-flex items-center justify-center px-06 py-04 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2"
                     onClick={() => trackAuditBooking('hero-cta')}
                   >
@@ -738,7 +746,8 @@ export default function Home() {
             </div>
             <div className="flex flex-col sm:flex-row gap-04 justify-center">
               <a
-                href="<!-- STRIPE_PAYMENT_LINK -->"
+                href="https://calendly.com/rajdeep-das/30min"                 target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center px-07 py-04 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-02 font-semibold shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2"
                 onClick={() => trackAuditBooking('case-study-cta')}
               >
@@ -852,7 +861,8 @@ export default function Home() {
               </ul>
 
               <a
-                href="<!-- STRIPE_PAYMENT_LINK -->"
+                href="https://calendly.com/rajdeep-das/30min"                 target="_blank"
+                rel="noopener noreferrer"
                 className="group/btn w-full inline-flex items-center justify-center px-05 py-04 bg-blue-60 text-white hover:bg-blue-70 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-blue-60 focus:ring-offset-2"
                 onClick={() => trackAuditBooking('services-audit-card')}
               >
@@ -905,7 +915,8 @@ export default function Home() {
               </ul>
 
               <a
-                href="<!-- CONTACT_LINK -->"
+                href="https://calendly.com/rajdeep-das/30min"                 target="_blank"
+                rel="noopener noreferrer"
                 className="group/btn w-full inline-flex items-center justify-center px-05 py-04 bg-gray-100 text-white hover:bg-gray-90 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-gray-70 focus:ring-offset-2"
               >
                 <span>Start Sprint</span>
@@ -961,7 +972,8 @@ export default function Home() {
               </ul>
 
               <a
-                href="<!-- CONTACT_LINK -->"
+                href="https://calendly.com/rajdeep-das/30min"                 target="_blank"
+                rel="noopener noreferrer"
                 className="group/btn w-full inline-flex items-center justify-center px-05 py-04 bg-gray-100 text-white hover:bg-gray-90 transition-all duration-200 text-body-compact-02 font-medium shadow-carbon-02 hover:shadow-carbon-04 focus:outline-none focus:ring-2 focus:ring-gray-70 focus:ring-offset-2"
               >
                 <span>Start Project</span>
@@ -996,7 +1008,8 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-05 justify-center mb-10">
               <a
-                href="<!-- STRIPE_PAYMENT_LINK -->"
+                href="https://calendly.com/rajdeep-das/30min"                 target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center px-07 py-04 bg-white text-gray-100 hover:bg-gray-10 transition-all duration-200 text-body-compact-02 font-semibold shadow-carbon-04 hover:shadow-carbon-05 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-90"
                 onClick={() => trackAuditBooking('final-cta')}
               >
