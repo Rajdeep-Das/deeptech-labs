@@ -1043,7 +1043,7 @@ export default function Home() {
         </div>
 
         {/* Reduced background elements - keep only essential ones */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Subtle grid pattern with reduced opacity */}
           <div
             className="absolute inset-0 opacity-[0.015]"
