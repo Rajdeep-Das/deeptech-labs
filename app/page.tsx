@@ -773,6 +773,238 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Teams Section */}
+      <section className="relative py-16 lg:py-20 bg-gray-10/30">
+        <div className="max-w-screen-lg mx-auto px-05 lg:px-06">
+          {/* Section Header */}
+          <div className="text-center mb-12 lg:mb-16">
+            <div className="mb-05">
+              <span className="inline-flex items-center px-04 py-02 bg-white text-gray-70 text-label-02 font-medium border-l-4 border-gray-60 shadow-carbon-01">
+                Meet the Team
+              </span>
+            </div>
+            <h2 className="text-fluid-heading-05 font-semibold text-gray-100 mb-05 tracking-tight">
+              Meet the Team Behind DeepTechLabs
+            </h2>
+          </div>
+
+          {/* Hero Founder Section */}
+          <div className="mb-16">
+            <div className="bg-gradient-to-r from-blue-60 to-blue-70 text-white p-08 lg:p-12 mb-08">
+              <div className="flex flex-col lg:flex-row items-start lg:items-center gap-08">
+                {/* Large Founder Photo */}
+                <div className="flex-shrink-0 mx-auto lg:mx-0">
+                  <div className="w-32 h-32 lg:w-40 lg:h-40 relative overflow-hidden bg-white/10 border-4 border-white/30 shadow-carbon-05">
+                    <Image
+                      src="/rajdeep.png"
+                      alt="Rajdeep Das - Founder & Principal Consultant"
+                      width={160}
+                      height={160}
+                      className="w-full h-full object-cover"
+                      priority={true}
+                    />
+                  </div>
+                </div>
+
+                {/* Founder Content */}
+                <div className="flex-1 text-center lg:text-left">
+                  <div className="mb-05">
+                    <h3 className="text-fluid-heading-04 lg:text-fluid-heading-05 font-semibold text-white mb-02">
+                      Rajdeep — Founder & Principal Consultant
+                    </h3>
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-02 mb-05">
+                      <span className="px-04 py-02 bg-white/20 text-white text-body-compact-01 font-medium backdrop-blur-sm">AWS</span>
+                      <span className="px-04 py-02 bg-white/20 text-white text-body-compact-01 font-medium backdrop-blur-sm">Azure</span>
+                      <span className="px-04 py-02 bg-white/20 text-white text-body-compact-01 font-medium backdrop-blur-sm">.NET Core</span>
+                      <span className="px-04 py-02 bg-white/20 text-white text-body-compact-01 font-medium backdrop-blur-sm">Java Spring Boot</span>
+                      <span className="px-04 py-02 bg-white/20 text-white text-body-compact-01 font-medium backdrop-blur-sm">Kubernetes</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-04">
+                    <p className="text-body-01 text-blue-20 leading-relaxed">
+                      I don't sit on the sidelines — I'm in the code with every client. Tools can flag spend,
+                      but they can't decide which trade-offs are safe or re-architect your backend so it scales
+                      without breaking. That's what I do.
+                    </p>
+
+                    <div className="border-l-4 border-white/30 pl-05 bg-white/10 p-05 backdrop-blur-sm">
+                      <p className="text-body-compact-01 text-white mb-02">
+                        <strong>Known for:</strong> Turning infrastructure chaos into stable, compliant, cost-optimized systems.
+                      </p>
+                      <p className="text-body-compact-01 text-white">
+                        Every audit and backend design is personally architected and delivered by me, with tested fixes,
+                        runbooks, and rollbacks you can rely on.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Co-Founders Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-08 mb-12">
+            {/* Jagdeep - Co-Founder */}
+            <div className="bg-white border-2 border-green-30 shadow-carbon-03 hover:shadow-carbon-05 transition-all duration-300 p-06">
+              <div className="flex items-start space-x-05 mb-05">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 relative overflow-hidden bg-green-10 border-3 border-green-60 shadow-carbon-02">
+                    <Image
+                      src="/jagdeep.jpeg"
+                      alt="Jagdeep Panta - Co-Founder, Engineering & Delivery"
+                      width={80}
+                      height={80}
+                      className="w-full h-full object-cover"
+                      priority={false}
+                    />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-heading-03 font-semibold text-gray-100 mb-01">
+                    Jagdeep Panta — Co-Founder, Engineering & Delivery
+                  </h3>
+                  <div className="flex flex-wrap gap-02 mb-04">
+                    <span className="px-03 py-01 bg-green-10 text-green-70 text-caption-01 font-medium">.NET Core</span>
+                    <span className="px-03 py-01 bg-green-10 text-green-70 text-caption-01 font-medium">Angular</span>
+                    <span className="px-03 py-01 bg-green-10 text-green-70 text-caption-01 font-medium">Azure DevOps</span>
+                    <span className="px-03 py-01 bg-green-10 text-green-70 text-caption-01 font-medium">CI/CD</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-04">
+                <p className="text-body-02 text-gray-80 leading-relaxed">
+                  When reliability matters, Jagdeep is the engineer you want. He's not just "scaling theory" —
+                  he built and runs <strong>Vidyaswati</strong>, an EdTech SaaS platform that 200+ students depend on daily.
+                </p>
+
+                <div className="border-l-4 border-green-60 pl-04 bg-green-10/40 p-04">
+                  <p className="text-body-compact-01 text-gray-80 mb-02">
+                    <strong>4+ years in:</strong> .NET Core, Angular, Azure DevOps, CI/CD pipelines.
+                  </p>
+                  <p className="text-body-compact-01 text-gray-80">
+                    Battle-tested under live traffic and deadlines. Ensures that new features ship fast —
+                    and stay stable in production.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Abhishek - Co-Founder */}
+            <div className="bg-white border-2 border-gray-30 shadow-carbon-03 hover:shadow-carbon-05 transition-all duration-300 p-06">
+              <div className="flex items-start space-x-05 mb-05">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 relative overflow-hidden bg-gray-10 border-3 border-gray-60 shadow-carbon-02">
+                    <Image
+                      src="/abhishek.jpeg"
+                      alt="Abhishek Singh - Co-Founder, Data & Intelligence"
+                      width={80}
+                      height={80}
+                      className="w-full h-full object-cover"
+                      priority={false}
+                    />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-heading-03 font-semibold text-gray-100 mb-01">
+                    Abhishek Singh — Co-Founder, Data & Intelligence
+                  </h3>
+                  <div className="flex flex-wrap gap-02 mb-04">
+                    <span className="px-03 py-01 bg-gray-10 text-gray-70 text-caption-01 font-medium">Power BI</span>
+                    <span className="px-03 py-01 bg-gray-10 text-gray-70 text-caption-01 font-medium">SQL</span>
+                    <span className="px-03 py-01 bg-gray-10 text-gray-70 text-caption-01 font-medium">AWS RDS/Redshift</span>
+                    <span className="px-03 py-01 bg-gray-10 text-gray-70 text-caption-01 font-medium">ETL</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-04">
+                <p className="text-body-02 text-gray-80 leading-relaxed">
+                  Most startups eventually ask: "We're burning thousands on AWS — but where is it going?"
+                  Abhishek is the one who answers that question with clarity.
+                </p>
+
+                <div className="border-l-4 border-gray-60 pl-04 bg-gray-10/40 p-04">
+                  <p className="text-body-compact-01 text-gray-80 mb-02">
+                    <strong>4+ years in:</strong> Power BI, SQL optimization, AWS RDS/Redshift, ETL pipelines.
+                  </p>
+                  <p className="text-body-compact-01 text-gray-80">
+                    Cut reporting time in half for 20+ business stakeholders. Gives founders visibility into costs,
+                    performance, and bottlenecks so decisions are data-driven, not guesswork.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Streamlined Why This Team Section */}
+          <div className="bg-gradient-to-r from-gray-90 to-gray-100 text-white p-08 lg:p-10 mb-12">
+            <div className="text-center mb-08">
+              <h3 className="text-fluid-heading-04 font-semibold mb-04">Why This Team?</h3>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-08 mb-08">
+              <div className="text-center lg:text-left">
+                <div className="w-16 h-16 bg-blue-60 mx-auto lg:mx-0 mb-04 flex items-center justify-center shadow-carbon-03">
+                  <Database className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-heading-03 font-semibold text-blue-20 mb-03">
+                  Cloud & Infra (Rajdeep)
+                </h4>
+                <p className="text-body-01 opacity-90 leading-relaxed">
+                  We go beyond dashboards and actually redesign your setup so your cloud bill drops
+                  and your system survives traffic spikes — whether you're on AWS or Azure.
+                </p>
+              </div>
+
+              <div className="text-center lg:text-left">
+                <div className="w-16 h-16 bg-green-60 mx-auto lg:mx-0 mb-04 flex items-center justify-center shadow-carbon-03">
+                  <Activity className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-heading-03 font-semibold text-green-20 mb-03">
+                  Backend (Jagdeep)
+                </h4>
+                <p className="text-body-01 opacity-90 leading-relaxed">
+                  We've built SaaS platforms that can't afford to go down. That's why every pipeline
+                  we touch is built to deploy fast and stay up when real users hit it.
+                </p>
+              </div>
+
+              <div className="text-center lg:text-left">
+                <div className="w-16 h-16 bg-gray-60 mx-auto lg:mx-0 mb-04 flex items-center justify-center shadow-carbon-03">
+                  <BarChart3 className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-heading-03 font-semibold text-gray-20 mb-03">
+                  Data (Abhishek)
+                </h4>
+                <p className="text-body-01 opacity-90 leading-relaxed">
+                  Most tools stop at telling you "spend is up." We trace it to the slow queries,
+                  bloated storage, and hidden leaks — and give you dashboards that point to fixes, not just charts.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center py-06 border-t border-white/20">
+              <p className="text-fluid-heading-03 font-semibold text-white mb-06">
+                <strong>Result:</strong> Your infra works, your features ship, and you sleep at night.
+              </p>
+
+              <a
+                href="https://calendly.com/rajdeep-das/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center justify-center px-08 py-05 bg-white text-gray-100 hover:bg-gray-10 transition-all duration-200 text-heading-02 font-bold shadow-carbon-05 hover:shadow-carbon-06 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-90"
+                onClick={() => trackContactInteraction('calendar')}
+              >
+                <span>Work With This Team</span>
+                <ArrowRight className="ml-04 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section
         id="services"
