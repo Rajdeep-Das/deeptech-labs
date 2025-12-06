@@ -17,6 +17,13 @@ export const metadata: Metadata = {
   title: "DeepTechLabs — Cloud Health & SaaS Integrations",
   description: "Stop burning money & time on cloud that doesn't work. Fixed-price cloud audits, 2-week integration sprints, and production-ready SaaS backends. Trusted by startups in US, UK & AU.",
   keywords: "cloud health audit, cloud cost optimization, SaaS integrations, cloud migration, AWS optimization, Azure optimization",
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    apple: '/icon.svg',
+  },
   openGraph: {
     title: "DeepTechLabs — Cloud Health & SaaS Integrations",
     description: "Stop burning money & time on cloud that doesn't work. Fixed-price cloud audits, 2-week integration sprints, and production-ready SaaS backends.",
@@ -50,7 +57,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIENhcmJvbi1jb21wbGlhbnQgZmF2aWNvbiAtLT4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHJ4PSI2IiBmaWxsPSIjMGY2MmZlIi8+CiAgCiAgPCEtLSBOZXR3b3JrIHRvcG9sb2d5IC0tPgogIDxnIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiPgogICAgPCEtLSBDZW50cmFsIG5vZGUgLS0+CiAgICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIyLjUiLz4KICAgIDwhLS0gU2F0ZWxsaXRlIG5vZGVzIC0tPgogICAgPGNpcmNsZSBjeD0iOSIgY3k9IjEwIiByPSIxLjUiLz4KICAgIDxjaXJjbGUgY3g9IjIzIiBjeT0iMTAiIHI9IjEuNSIvPgogICAgPGNpcmNsZSBjeD0iOSIgY3k9IjIyIiByPSIxLjUiLz4KICAgIDxjaXJjbGUgY3g9IjIzIiBjeT0iMjIiIHI9IjEuNSIvPgogIDwvZz4KCiAgPCEtLSBDb25uZWN0aW9uIGxpbmVzIC0tPgogIDxnIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMC44IiBvcGFjaXR5PSIwLjYiPgogICAgPGxpbmUgeDE9IjE2IiB5MT0iMTYiIHgyPSI5IiB5Mj0iMTAiLz4KICAgIDxsaW5lIHgxPSIxNiIgeTE9IjE2IiB4Mj0iMjMiIHkyPSIxMCIvPgogICAgPGxpbmUgeDE9IjE2IiB5MT0iMTYiIHgyPSI5IiB5Mj0iMjIiLz4KICAgIDxsaW5lIHgxPSIxNiIgeTE9IjE2IiB4Mj0iMjMiIHkyPSIyMiIvPgogIDwvZz4KCiAgPCEtLSBBY2NlbnQgZWxlbWVudHMgLS0+CiAgPGcgZmlsbD0iIzc4YTlmZiIgb3BhY2l0eT0iMC40Ij4KICAgIDxyZWN0IHg9IjUiIHk9IjUiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiLz4KICAgIDxyZWN0IHg9IjI1IiB5PSI1IiB3aWR0aD0iMiIgaGVpZ2h0PSIyIi8+CiAgICA8cmVjdCB4PSI1IiB5PSIyNSIgd2lkdGg9IjIiIGhlaWdodD0iMiIvPgogICAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iMiIgaGVpZ2h0PSIyIi8+CiAgPC9nPgo8L3N2Zz4K" />
 
         {/* Umami Analytics - Primary */}
         <script
