@@ -3,12 +3,12 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Download, Share2, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AtomsLearning Case Study: 73% AWS Cost Reduction | DeepTechLabs",
-  description: "Discover how DeepTechLabs helped AtomsLearning reduce AWS costs by 73% (from $5,200 to $1,390/month) while achieving zero downtime during peak exam periods. Complete medical EdTech infrastructure transformation case study.",
+  title: "AtomsLearning Case Study: ~75-80% AWS Cost Reduction | DeepTechLabs",
+  description: "Discover how DeepTechLabs helped AtomsLearning reduce AWS costs by ~75-80% (from ~$5,800 to ~$1,400/year) while achieving zero downtime during peak exam periods. Complete medical EdTech infrastructure transformation case study.",
   keywords: "AWS cost reduction, Kubernetes optimization, medical EdTech, cloud cost optimization, EKS vs K3s, AtomsLearning, infrastructure scaling, exam platform optimization",
   openGraph: {
-    title: "AtomsLearning: 73% AWS Cost Reduction Case Study",
-    description: "Complete infrastructure transformation that cut AWS costs from $5,200 to $1,390/month while ensuring 100% uptime during critical exam periods.",
+    title: "AtomsLearning: ~75-80% AWS Cost Reduction Case Study",
+    description: "Complete infrastructure transformation that cut AWS costs from ~$5,800 to ~$1,400/year while ensuring 100% uptime during critical exam periods.",
     type: "article",
     url: "https://deepteachlabs.in/case-studies/atomslearning",
     images: [
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
         url: "/case-study-atomslearning-og.png",
         width: 1200,
         height: 630,
-        alt: "AtomsLearning 73% AWS Cost Reduction Case Study",
+        alt: "AtomsLearning ~75-80% AWS Cost Reduction Case Study",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AtomsLearning: 73% AWS Cost Reduction Case Study",
-    description: "How we helped a medical EdTech platform scale infrastructure while cutting AWS costs by 73%",
+    title: "AtomsLearning: ~75-80% AWS Cost Reduction Case Study",
+    description: "How we helped a medical EdTech platform scale infrastructure while cutting AWS costs by ~75-80%",
     images: ["/case-study-atomslearning-og.png"],
   },
   alternates: {
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "CaseStudy",
-  "headline": "AtomsLearning: 73% AWS Cost Reduction Case Study",
-  "description": "Complete infrastructure transformation that reduced AWS costs by 73% while ensuring zero downtime during peak exam periods",
+  "headline": "AtomsLearning: ~75-80% AWS Cost Reduction Case Study",
+  "description": "Complete infrastructure transformation that reduced AWS costs by ~75-80% while ensuring zero downtime during peak exam periods",
   "author": {
     "@type": "Organization",
     "name": "DeepTechLabs",
@@ -51,13 +51,13 @@ const structuredData = {
     {
       "@type": "QuantitativeValue",
       "name": "Cost Reduction",
-      "value": "73",
+      "value": "75-80",
       "unitText": "PERCENT"
     },
     {
       "@type": "MonetaryAmount",
-      "name": "Monthly Savings",
-      "value": "3810",
+      "name": "Annual Savings",
+      "value": "4400",
       "currency": "USD"
     },
     {
@@ -136,22 +136,22 @@ export default function AtomsLearningCaseStudy() {
                 </div>
 
                 <h1 className="text-fluid-heading-05 lg:text-fluid-heading-06 font-semibold text-gray-100 mb-06 leading-tight tracking-tight">
-                  AtomsLearning: 73% AWS Cost Reduction
+                  AtomsLearning: ~75-80% AWS Cost Reduction
                 </h1>
 
                 <p className="text-body-02 text-gray-70 mb-08 leading-relaxed">
-                  How we helped a medical EdTech platform scale infrastructure during peak exam periods while cutting AWS costs from <strong className="text-gray-100">$5,200 to $1,390 per month</strong> through strategic dual-mode architecture implementation.
+                  How we helped a medical EdTech platform scale infrastructure during peak exam periods while cutting AWS costs from <strong className="text-gray-100">~$5,800 to ~$1,400 per year</strong> through strategic dual-mode architecture implementation.
                 </p>
 
                 {/* Quick Stats */}
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-04 mb-08">
                   <div className="text-center p-04 bg-green-10/50 border-l-2 border-green-60">
-                    <div className="text-heading-04 font-bold text-green-60">73%</div>
+                    <div className="text-heading-04 font-bold text-green-60">~75-80%</div>
                     <div className="text-caption-01 text-gray-70">Cost Reduction</div>
                   </div>
                   <div className="text-center p-04 bg-blue-10/50 border-l-2 border-blue-60">
-                    <div className="text-heading-04 font-bold text-blue-60">$3,810</div>
-                    <div className="text-caption-01 text-gray-70">Monthly Savings</div>
+                    <div className="text-heading-04 font-bold text-blue-60">~$4,400/yr</div>
+                    <div className="text-caption-01 text-gray-70">Annual Savings</div>
                   </div>
                   <div className="text-center p-04 bg-gray-10 border-l-2 border-gray-60">
                     <div className="text-heading-04 font-bold text-gray-100">Zero</div>
@@ -229,7 +229,7 @@ export default function AtomsLearningCaseStudy() {
             <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-04 lg:gap-06 text-center">
               <div className="group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:bg-white/10 p-03 lg:p-04 rounded-md">
                 <div className="text-heading-05 lg:text-heading-06 font-light mb-02 transition-all duration-300 group-hover:text-blue-20">
-                  73%
+                  ~75-80%
                 </div>
                 <div className="text-caption-01 opacity-75 group-hover:opacity-100 transition-opacity duration-300 text-xs lg:text-sm">
                   Cost Reduction
@@ -238,10 +238,10 @@ export default function AtomsLearningCaseStudy() {
               </div>
               <div className="group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:bg-white/10 p-03 lg:p-04 rounded-md">
                 <div className="text-heading-05 lg:text-heading-06 font-light mb-02 transition-all duration-300 group-hover:text-blue-20">
-                  $3,810
+                  ~$4,400/yr
                 </div>
                 <div className="text-caption-01 opacity-75 group-hover:opacity-100 transition-opacity duration-300 text-xs lg:text-sm">
-                  Monthly Savings
+                  Annual Savings
                 </div>
                 <div className="w-0 h-0.5 bg-blue-20 mx-auto mt-02 transition-all duration-300 group-hover:w-6 lg:group-hover:w-8"></div>
               </div>
@@ -291,20 +291,20 @@ export default function AtomsLearningCaseStudy() {
 
               <div className="lg:col-span-4">
                 <div className="bg-white border border-gray-20 shadow-carbon-03 p-06">
-                  <h3 className="text-heading-03 text-gray-100 mb-06 text-center">Monthly Infrastructure Investment</h3>
+                  <h3 className="text-heading-03 text-gray-100 mb-06 text-center">Annual Infrastructure Investment</h3>
                   <div className="flex justify-center items-end space-x-08 mb-06" style={{height: "120px"}}>
                     <div className="text-center">
                       <div className="bg-red-50 w-16 mb-03" style={{height: "80px"}}></div>
-                      <div className="text-body-compact-01 font-semibold text-gray-100">$5,200</div>
+                      <div className="text-body-compact-01 font-semibold text-gray-100">~$5,800</div>
                       <div className="text-caption-01 text-gray-70">Before</div>
                     </div>
                     <div className="text-center">
                       <div className="bg-green-50 w-16 mb-03" style={{height: "22px"}}></div>
-                      <div className="text-body-compact-01 font-semibold text-gray-100">$1,390</div>
+                      <div className="text-body-compact-01 font-semibold text-gray-100">~$1,400</div>
                       <div className="text-caption-01 text-gray-70">After</div>
                     </div>
                   </div>
-                  <p className="text-body-compact-01 text-center text-gray-70">73% reduction in monthly AWS spend</p>
+                  <p className="text-body-compact-01 text-center text-gray-70">~75-80% reduction in annual AWS spend</p>
                 </div>
               </div>
             </div>
@@ -528,9 +528,9 @@ export default function AtomsLearningCaseStudy() {
                 {/* Gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-green-10/0 to-green-10/0 group-hover:from-green-10/20 group-hover:to-green-10/10 transition-all duration-300"></div>
                 <div className="relative">
-                  <div className="text-heading-07 font-light text-green-60 mb-03 transition-all duration-300 group-hover:text-green-70 group-hover:scale-110">73%</div>
+                  <div className="text-heading-07 font-light text-green-60 mb-03 transition-all duration-300 group-hover:text-green-70 group-hover:scale-110">~75-80%</div>
                   <h3 className="text-heading-04 text-gray-100 mb-03 transition-colors duration-300 group-hover:text-green-70">Cost Reduction</h3>
-                  <p className="text-body-01 text-gray-70 transition-colors duration-300 group-hover:text-gray-80">Monthly AWS spend decreased from $5,200 to $1,390</p>
+                  <p className="text-body-01 text-gray-70 transition-colors duration-300 group-hover:text-gray-80">Annual AWS spend decreased from ~$5,800 to ~$1,400</p>
                   {/* Animated underline */}
                   <div className="w-0 h-0.5 bg-green-60 mx-auto mt-04 transition-all duration-500 group-hover:w-16"></div>
                 </div>

@@ -4,7 +4,7 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Case Studies | DeepTechLabs - Cloud Infrastructure Success Stories",
-  description: "Explore real-world cloud optimization success stories. See how DeepTechLabs helped companies reduce AWS costs by up to 73% while improving performance and reliability.",
+  description: "Explore real-world cloud optimization success stories. See how DeepTechLabs helped companies reduce AWS costs by up to ~75-80% while improving performance and reliability.",
   keywords: "case studies, cloud optimization, AWS cost reduction, infrastructure success stories, cloud migration, Kubernetes optimization",
   openGraph: {
     title: "Case Studies | DeepTechLabs - Cloud Infrastructure Success Stories",
@@ -17,17 +17,17 @@ export const metadata: Metadata = {
 const caseStudies = [
   {
     slug: "atomslearning",
-    title: "AtomsLearning: 73% AWS Cost Reduction",
+    title: "AtomsLearning: ~75-80% AWS Cost Reduction",
     industry: "Medical EdTech",
     location: "India",
     challenge: "Peak traffic scaling during exam periods",
     results: {
-      costReduction: "73%",
-      monthlySavings: "$3,810",
+      costReduction: "~75-80%",
+      monthlySavings: "~$4,400/yr",
       downtime: "Zero",
       uptime: "100%"
     },
-    description: "How we helped a medical EdTech platform scale infrastructure while cutting AWS costs from $5,200 to $1,390 per month through strategic dual-mode architecture.",
+    description: "How we helped a medical EdTech platform scale infrastructure while cutting AWS costs from ~$5,800 to ~$1,400 per year through strategic dual-mode architecture.",
     technologies: ["Amazon EKS", "K3s Kubernetes", "AWS Graviton2", "CloudWatch"],
     featured: true
   }
@@ -73,12 +73,12 @@ export default function CaseStudiesIndex() {
           {/* Stats Overview */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-06 mb-12">
             <div className="text-center p-06 bg-white border border-gray-20 shadow-carbon-02">
-              <div className="text-heading-05 font-bold text-green-60 mb-02">73%</div>
+              <div className="text-heading-05 font-bold text-green-60 mb-02">~75-80%</div>
               <div className="text-caption-01 text-gray-70">Average Cost Reduction</div>
             </div>
             <div className="text-center p-06 bg-white border border-gray-20 shadow-carbon-02">
-              <div className="text-heading-05 font-bold text-blue-60">$3,810</div>
-              <div className="text-caption-01 text-gray-70">Monthly Savings</div>
+              <div className="text-heading-05 font-bold text-blue-60">~$4,400/yr</div>
+              <div className="text-caption-01 text-gray-70">Annual Savings</div>
             </div>
             <div className="text-center p-06 bg-white border border-gray-20 shadow-carbon-02">
               <div className="text-heading-05 font-bold text-gray-100">7</div>
@@ -172,7 +172,7 @@ export default function CaseStudiesIndex() {
                           <div className="text-heading-04 font-bold text-blue-60 mb-01">
                             {study.results.monthlySavings}
                           </div>
-                          <div className="text-caption-01 text-gray-70">Monthly Savings</div>
+                          <div className="text-caption-01 text-gray-70">Annual Savings</div>
                         </div>
                         <div className="text-center">
                           <div className="text-heading-04 font-bold text-gray-100 mb-01">

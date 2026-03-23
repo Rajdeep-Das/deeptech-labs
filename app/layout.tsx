@@ -197,7 +197,7 @@ export default function RootLayout({
                     "@type": "Person",
                     "name": "Dr. Sushanta Bhanja"
                   },
-                  "reviewBody": "DeepTechLabs helped us cut our AWS costs from $5,200 to $1,390 per month — a 73% reduction. They also took full ownership of our AWS cloud and Kubernetes clusters, which freed our small team to focus on building AtomsLearning instead of firefighting infra issues.",
+                  "reviewBody": "DeepTechLabs helped us cut our AWS costs from ~$5,800 to ~$1,400 per year — a ~75-80% reduction. They also took full ownership of our AWS cloud and Kubernetes clusters, which freed our small team to focus on building AtomsLearning instead of firefighting infra issues.",
                   "publisher": {
                     "@type": "Organization",
                     "name": "AtomsLearning"

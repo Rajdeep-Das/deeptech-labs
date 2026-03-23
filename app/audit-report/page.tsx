@@ -125,9 +125,9 @@ export default function AuditReport() {
                 <div className="bg-gray-10 border-l-4 border-blue-60 p-05">
                   <h3 className="text-heading-02 font-semibold text-gray-100 mb-03">Key Findings (Snapshot):</h3>
                   <ul className="space-y-02 text-body-compact-01 text-gray-80">
-                    <li>Current monthly AWS spend: <strong className="text-red-60">US$5,200</strong></li>
-                    <li>Estimated spend after optimizations: <strong className="text-green-60">US$1,390</strong></li>
-                    <li>Projected savings: <strong className="text-green-60">~US$3,810 (73%)</strong></li>
+                    <li>Current annual AWS spend: <strong className="text-red-60">~US$5,800/year</strong></li>
+                    <li>Estimated spend after optimizations: <strong className="text-green-60">~US$1,400/year</strong></li>
+                    <li>Projected savings: <strong className="text-green-60">~US$4,400/year (~75-80%)</strong></li>
                     <li>Downtime events during exam nights: Reduced from <strong className="text-red-60">frequent disruptions</strong> → <strong className="text-green-60">Zero downtime</strong></li>
                     <li>Deployment time: Reduced from <strong className="text-red-60">~60–65 mins</strong> → <strong className="text-green-60">10–12 mins</strong> after optimized scaling</li>
                   </ul>
@@ -143,11 +143,11 @@ export default function AuditReport() {
                 <div className="space-y-04">
                   <div className="flex items-center justify-between">
                     <span className="text-body-compact-01 text-gray-70">Cost Reduction</span>
-                    <span className="text-heading-03 font-bold text-green-60">73%</span>
+                    <span className="text-heading-03 font-bold text-green-60">~75-80%</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-body-compact-01 text-gray-70">Monthly Savings</span>
-                    <span className="text-heading-03 font-bold text-green-60">$3,810</span>
+                    <span className="text-body-compact-01 text-gray-70">Annual Savings</span>
+                    <span className="text-heading-03 font-bold text-green-60">~$4,400/yr</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-body-compact-01 text-gray-70">Deploy Speed</span>
@@ -495,9 +495,9 @@ export default function AuditReport() {
                 <div className="flex items-center justify-center mb-03">
                   <TrendingDown className="w-6 h-6 text-green-60" />
                 </div>
-                <div className="text-heading-04 font-bold text-green-60 mb-02">73%</div>
+                <div className="text-heading-04 font-bold text-green-60 mb-02">~75-80%</div>
                 <div className="text-body-compact-01 text-gray-80">
-                  <strong>Cost:</strong> reduction (from $5,200 → $1,390).
+                  <strong>Cost:</strong> reduction (from ~$5,800 → ~$1,400/year).
                 </div>
               </div>
 

@@ -296,14 +296,14 @@ export default function Home() {
                       <div className="p-04 bg-gray-10 border-l-2 border-green-60">
                         <div className="flex items-center justify-between mb-02">
                           <span className="text-label-01 text-gray-70">
-                            AWS Monthly Bill
+                            AWS Annual Bill
                           </span>
                           <div className="flex items-center space-x-02">
                             <span className="text-caption-01 text-gray-50 line-through">
-                              $5,200
+                              ~$5,800
                             </span>
                             <span className="text-heading-compact-02 font-semibold text-green-60">
-                              $1,390
+                              ~$1,400
                             </span>
                           </div>
                         </div>
@@ -311,7 +311,7 @@ export default function Home() {
                           <div className="w-1/4 h-full bg-green-60"></div>
                         </div>
                         <div className="text-caption-02 text-green-60 font-medium">
-                          73% reduction
+                          ~75-80% reduction
                         </div>
                       </div>
 
@@ -420,8 +420,8 @@ export default function Home() {
             <div className="bg-white border border-gray-20 shadow-carbon-03 p-07 lg:p-08">
               {/* Quote */}
               <blockquote className="text-body-02 text-gray-80 leading-relaxed mb-06">
-                "DeepTechLabs helped us cut our AWS costs from $5,200 to $1,390
-                per month — a 73% reduction. They also took full ownership of
+                "DeepTechLabs helped us cut our AWS costs from ~$5,800 to ~$1,400
+                per year — a ~75-80% reduction. They also took full ownership of
                 our AWS cloud and Kubernetes clusters, which freed our small
                 team to focus on building AtomsLearning instead of firefighting
                 infra issues. Their work was fast, reliable, and gave us peace
@@ -472,7 +472,7 @@ export default function Home() {
                 <div className="ml-auto hidden lg:flex items-center space-x-06">
                   <div className="text-center">
                     <div className="text-heading-04 font-bold text-green-60">
-                      73%
+                      ~75-80%
                     </div>
                     <div className="text-caption-01 text-gray-70">
                       Cost Reduction
@@ -505,13 +505,13 @@ export default function Home() {
               </span>
             </div>
             <h2 className="text-fluid-heading-05 font-semibold text-gray-100 mb-05 tracking-tight">
-              Case Study: How a Medical EdTech Cut AWS Costs by 73% and
+              Case Study: How a Medical EdTech Cut AWS Costs by ~75-80% and
               Eliminated Downtime
             </h2>
             <p className="text-body-02 text-gray-70 max-w-2xl mx-auto leading-relaxed">
               AtomsLearning was facing spiraling cloud costs and unreliable
               deployments. Here's how we helped them scale their platform while
-              reducing AWS spend from $5,200 to $1,390 per month.
+              reducing AWS spend from ~$5,800 to ~$1,400 per year.
             </p>
           </div>
 
@@ -529,7 +529,7 @@ export default function Home() {
             <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-04 lg:gap-06 text-center">
               <div className="group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:bg-white/10 p-03 lg:p-04 rounded-md">
                 <div className="text-heading-05 lg:text-heading-06 font-light mb-02 transition-all duration-300 group-hover:text-blue-20">
-                  73%
+                  ~75-80%
                 </div>
                 <div className="text-caption-01 opacity-75 group-hover:opacity-100 transition-opacity duration-300 text-xs lg:text-sm">
                   Cost Reduction
@@ -538,10 +538,10 @@ export default function Home() {
               </div>
               <div className="group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:bg-white/10 p-03 lg:p-04 rounded-md">
                 <div className="text-heading-05 lg:text-heading-06 font-light mb-02 transition-all duration-300 group-hover:text-blue-20">
-                  $3,810
+                  ~$4,400/yr
                 </div>
                 <div className="text-caption-01 opacity-75 group-hover:opacity-100 transition-opacity duration-300 text-xs lg:text-sm">
-                  Monthly Savings
+                  Annual Savings
                 </div>
                 <div className="w-0 h-0.5 bg-blue-20 mx-auto mt-02 transition-all duration-300 group-hover:w-6 lg:group-hover:w-8"></div>
               </div>

@@ -69,7 +69,7 @@ Traffic Source → Landing Page → Value Recognition → Immediate Action
 **Landing Experience:**
 - Direct to hero section (current design is strong)
 - Clear value proposition: "Stop Burning Money & Time on Cloud That Doesn't Work"
-- Social proof: AtomsLearning case study (73% cost reduction)
+- Social proof: AtomsLearning case study (~75-80% cost reduction)
 - Trust indicators: "Limited to 5 audits per month"
 
 **Immediate CTA:**
